@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katiusca Digital Studio</title>
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+/* PORTADA */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.hero {
+    height: 100vh;
+    background: url('PORTADA.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 50px;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ff4d88, #ff1a66);
+    padding: 14px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.btn-instagram {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    padding: 14px 30px;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* SECCIONES */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+/* SERVICIOS */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CONTACTO */
+.contact a {
+    display: block;
+    margin: 10px;
+    color: #ff4d88;
+}
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.btn, .btn-instagram {
+    color: white !important;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+<section class="hero">
+    <div style="position: relative; z-index: 2;">
+        <h1>Impulso tu negocio en redes y web 🚀</h1>
+        <p>Te ayudo a atraer más clientes y vender más con una imagen profesional</p>
+       <a href="https://wa.me/18298365511" class="btn">Escríbeme por WhatsApp</a>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section">
+    <h2>Mis Servicios</h2>
+    <div class="services">
+
+        <div class="card">
+            <img src="servicio1.jpg">
+            <h3>Gestión de Redes</h3>
+            <p>Optimizo tu Instagram para atraer más clientes.</p>
+        </div>
+
+        <div class="card">
+            <img src="servicio2.jpg">
+            <h3>Creación de Contenido</h3>
+            <p>Diseños modernos que venden.</p>
+        </div>
+
+        <div class="card">
+            <img src="servicio3.jpg">
+            <h3>Páginas Web</h3>
+            <p>Webs profesionales para tu negocio.</p>
+        </div>
+
+        <div class="card">
+            <img src="servicio4.jpg">
+            <h3>Branding</h3>
+            <p>Imagen visual completa para tu marca.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PORTAFOLIO -->
+<section class="section">
+    <h2>Resultados reales</h2>
+    <p>He ayudado a negocios a mejorar su imagen, atraer más clientes y organizar su presencia digital.</p>
+</section>
+
+<!-- CONTACTO -->
+<section class="section contact">
+    <h2>Contáctame</h2>
+
+    <a href="https://wa.me/18298365511" class="btn">
+        📲 Escríbeme por WhatsApp
+    </a>
+
+    <a href="https://instagram.com/katiusca_studio" target="_blank" class="btn-instagram">
+        📸 Ver mi Instagram
+    </a>
+</section>
+
+</body>
+</html>
