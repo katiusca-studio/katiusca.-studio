@@ -13,13 +13,11 @@ body {
     color: white;
 }
 
-/* PORTADA */
+/* PORTADA PARA COMPUTADORAS */
 .hero {
     height: 100vh;
-    background: url('./portada.jpg') no-repeat;
+    background: url('./portada-pc.jpg') no-repeat center center;
     background-size: cover;
-    /* Este truco hace que en PC se centre, pero si la pantalla es estrecha como un celular, priorice el lado izquierdo de los neones */
-    background-position: 25% center; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,9 +30,32 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* Subimos a 0.6 para que las letras blancas tengan un fondo bien sólido y contrastado en la PC */
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.65);
     z-index: 1;
+}
+
+/* CAMBIO AUTOMÁTICO PARA CELULARES */
+@media (max-width: 768px) {
+    .hero {
+        /* Corregido para que coincida exactamente con tu archivo de GitHub con acento */
+        background: url('./portada-móvil.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    
+    .hero::before {
+        background: rgba(0, 0, 0, 0.5); 
+    }
+
+    /* Ajuste para que los textos en el celular no tapen tu diseño de Canva abajo */
+    .hero h1 {
+        font-size: 32px !important;
+        padding: 0 10px;
+    }
+
+    .hero p {
+        font-size: 16px !important;
+        padding: 0 15px;
+    }
 }
 
 .hero div {
