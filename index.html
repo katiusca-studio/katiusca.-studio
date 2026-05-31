@@ -37,25 +37,35 @@ body {
 /* CAMBIO AUTOMÁTICO PARA CELULARES */
 @media (max-width: 768px) {
     .hero {
-        background: url('movil.jpg') !important;
+        background: url('movil.jpg') no-repeat center center !important;
         background-size: cover !important;
-        background-position: center center !important;
+        /* Esto empuja los textos hacia la parte de arriba del celular */
+        align-items: flex-start !important; 
     }
-}
     
     .hero::before {
-        background: rgba(0, 0, 0, 0.5); 
+        background: rgba(0, 0, 0, 0.5) !important; 
     }
 
-    /* Ajuste para que los textos en el celular no tapen tu diseño de Canva abajo */
+    /* Espacio para que el título no pegue al borde de la pantalla arriba */
+    .hero div {
+        padding-top: 50px !important;
+    }
+
     .hero h1 {
-        font-size: 32px !important;
-        padding: 0 10px;
+        font-size: 28px !important;
+        padding: 0 15px !important;
+        margin-bottom: 8px !important;
     }
 
     .hero p {
-        font-size: 16px !important;
-        padding: 0 15px;
+        font-size: 15px !important;
+        padding: 0 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .btn {
+        margin-top: 5px !important;
     }
 }
 
