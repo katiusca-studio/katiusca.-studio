@@ -14,13 +14,6 @@ body {
 }
 
 /* PORTADA */
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-}
 .hero {
     height: 100vh;
     background: url('./portada.jpg') no-repeat center center;
@@ -37,7 +30,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
 }
 
 .hero div {
