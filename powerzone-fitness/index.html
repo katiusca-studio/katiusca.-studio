@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerZone Fitness | Cambia Tu Cuerpo, Cambia Tu Vida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           1. VARIABLES Y RESET
+           ========================================================================== */
+        :root {
+            --bg-principal: #0a0a0c;
+            --bg-secundario: #121216;
+            --color-acento: #ff3e3e; /* Rojo energético de conversión */
+            --color-acento-hover: #e03535;
+            --texto-blanco: #ffffff;
+            --texto-gris: #a0a0a9;
+            --fuente-titulos: 'Montserrat', sans-serif;
+            --fuente-cuerpo: 'Inter', sans-serif;
+            --max-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            background-color: var(--bg-principal);
+            color: var(--texto-blanco);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ==========================================================================
+           2. COMPONENTES REUTILIZABLES
+           ========================================================================== */
+        .contenedor {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: var(--color-acento);
+            color: var(--texto-blanco);
+            text-decoration: none;
+            padding: 14px 28px;
+            font-family: var(--fuente-titulos);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-principal:hover {
+            background-color: var(--color-acento-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 62, 62, 0.4);
+        }
+
+        .titulo-seccion {
+            font-family: var(--fuente-titulos);
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .titulo-seccion span {
+            color: var(--color-acento);
+        }
+
+        /* ==========================================================================
+           3. HERO SECTION (ZONA DE IMPACTO)
+           ========================================================================== */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            /* Degradado oscuro sobre fondo gris oscuro simulando textura/fuerza */
+            background: linear-gradient(rgba(10, 10, 12, 0.85), rgba(10, 10, 12, 0.95)), 
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1470') no-repeat center center/cover;
+            padding: 60px 0;
+        }
+
+        .hero-contenido {
+            max-width: 650px;
+        }
+
+        .hero-subtitulo {
+            font-family: var(--fuente-titulos);
+            color: var(--color-acento);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .hero-titulo {
+            font-family: var(--fuente-titulos);
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-descripcion {
+            font-size: 1.1rem;
+            color: var(--texto-gris);
+            margin-bottom: 30px;
+        }
+
+        /* ==========================================================================
+           4. SECCIÓN BENEFICIOS / CARACTERÍSTICAS
+           ========================================================================== */
+        .beneficios {
+            padding: 80px 0;
+            background-color: var(--bg-secundario);
+        }
+
+        .grid-beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta-beneficio {
+            background-color: var(--bg-principal);
+            padding: 40px 30px;
+            border-radius: 6px;
+            border-left: 4px solid var(--color-acento);
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta-beneficio:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta-icono {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tarjeta-beneficio h3 {
+            font-family: var(--fuente-titulos);
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta-beneficio p {
+            color: var(--texto-gris);
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           5. SECCIÓN DE ENLACES RÁPIDOS (CONVERSIÓN DIRECTA)
+           ========================================================================== */
+        .enlaces-rapidos {
+            padding: 80px 0;
+            background-color: var(--bg-principal);
+        }
+
+        .grid-enlaces {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .enlace-card {
+            background-color: var(--bg-secundario);
+            border: 1px solid #22222a;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: border-color 0.3s ease;
+        }
+
+        .enlace-card:hover {
+            border-color: var(--color-acento);
+        }
+
+        .enlace-info h4 {
+            font-family: var(--fuente-titulos);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .enlace-info p {
+            color: var(--texto-gris);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .enlace-card .btn-principal {
+            width: 100%;
+            padding: 12px;
+        }
+
+        /* ==========================================================================
+           6. FOOTER
+           ========================================================================== */
+        footer {
+            background-color: var(--bg-secundario);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #22222a;
+            font-size: 0.9rem;
+            color: var(--texto-gris);
+        }
+
+        /* ==========================================================================
+           7. RESPONSIVE DESIGN (MEDIA QUERIES)
+           ========================================================================== */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 60vh;
+                text-align: center;
+                padding: 40px 0;
+            }
+
+            .hero-contenido {
+                margin: 0 auto;
+            }
+
+            .hero-titulo {
+                font-size: 2.3rem;
+            }
+
+            .hero-descripcion {
+                font-size: 1rem;
+            }
+
+            .titulo-seccion {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="contenedor">
+            <div class="hero-contenido">
+                <span class="hero-subtitulo">No dejes para mañana lo que puedes entrenar hoy</span>
+                <h1 class="hero-titulo">Desata tu verdadero potencial</h1>
+                <p class="hero-descripcion">Instalaciones de primer nivel, entrenadores certificados y la comunidad que necesitas para alcanzar tus objetivos de salud y fuerza.</p>
+                <a href="#enlaces" class="btn-principal">Comenzar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="beneficios">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">¿Por qué elegirnos?</h2>
+            <div class="grid-beneficios">
+                <div class="tarjeta-beneficio">
+                    <span class="tarjeta-icono">🏋️‍♂️</span>
+                    <h3>Zona de Fuerza</h3>
+                    <p>Equipamiento moderno y de alta gama para levantamiento, peso libre y máquinas guiadas.</p>
+                </div>
+                <div class="tarjeta-beneficio">
+                    <span class="tarjeta-icono">⏱️</span>
+                    <h3>Clases Grupales</h3>
+                    <p>Spinning, HIIT, Funcional y Yoga adaptados a todos los niveles de condición física.</p>
+                </div>
+                <div class="tarjeta-beneficio">
+                    <span class="tarjeta-icono">🥗</span>
+                    <h3>Asesoría Completa</h3>
+                    <p>Planes de entrenamiento y orientación nutricional para acelerar tus resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enlaces" class="enlaces-rapidos">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Enlaces <span>Rápidos de Acción</span></h2>
+            
+            <div class="grid-enlaces">
+                <div class="enlace-card">
+                    <div class="enlace-info">
+                        <h4>Inscripción Inmediata</h4>
+                        <p>Habla directamente con un asesor por WhatsApp y asegura tu membresía hoy mismo.</p>
+                    </div>
+                    <a href="https://wa.me/tu_numero_aqui" target="_blank" class="btn-principal">Chatear por WhatsApp</a>
+                </div>
+
+                <div class="enlace-card">
+                    <div class="enlace-info">
+                        <h4>Comunidad & Clases</h4>
+                        <p>Síguenos en Instagram para ver los horarios semanales, eventos y motivación diaria.</p>
+                    </div>
+                    <a href="https://instagram.com/tu_usuario_aqui" target="_blank" class="btn-principal">Ver Instagram</a>
+                </div>
+
+                <div class="enlace-card">
+                    <div class="enlace-info">
+                        <h4>Nuestra Ubicación</h4>
+                        <p>Conoce nuestras instalaciones. Visítanos en nuestro horario de atención corrido.</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="btn-principal">Cómo Llegar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2026 PowerZone Fitness. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
