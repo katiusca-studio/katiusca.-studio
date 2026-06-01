@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohana - Postres Artesanales | Demo Portafolio</title>
+    <style>
+        /* BASE Y COLORES DE MARCA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #FDF8F2; /* Crema suave del fondo del logo */
+            color: #333333;
+        }
+
+        /* CONFIGURACIÓN RESPONSIVA PARA IMÁGENES */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* SECCIÓN PORTADA (HERO) */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            /* Esta será la portada que harás en Canva, se adapta sola a PC y móvil */
+            background: linear-gradient(rgba(253, 248, 242, 0.85), rgba(253, 248, 242, 0.70)), url('./portada-ohana.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-web {
+            max-width: 220px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #8C1D31; /* Borgoña del logo */
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555555;
+            max-width: 550px;
+        }
+
+        /* BOTONES PREMIUM */
+        .btn {
+            display: inline-block;
+            background-color: #8C1D31; /* Borgoña */
+            color: #FDF8F2; /* Crema */
+            text-decoration: none;
+            padding: 14px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(140, 29, 49, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(140, 29, 49, 0.3);
+        }
+
+        /* SECCIÓN HISTORIA / ESENCIA */
+        .esencia {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .esencia-texto {
+            flex: 1;
+        }
+
+        .esencia-texto h2 {
+            font-size: 2rem;
+            color: #8C1D31;
+            margin-bottom: 20px;
+        }
+
+        .esencia-texto p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555555;
+        }
+
+        .esencia-foto {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .esencia-foto img {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 85%;
+        }
+
+        /* SECCIÓN VITRINA DE SABORES (TARJETAS) */
+        .vitrina {
+            padding: 80px 20px;
+            background-color: #F8EFE4; /* Un crema un toque más oscurito para dar contraste */
+            text-align: center;
+        }
+
+        .vitrina h2 {
+            font-size: 2rem;
+            color: #8C1D31;
+            margin-bottom: 40px;
+        }
+
+        .grid-postres {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta-postre {
+            background-color: #FDF8F2;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta-postre:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta-info {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .tarjeta-info h3 {
+            color: #8C1D31;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .tarjeta-info p {
+            color: #666666;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* PIE DE PÁGINA / CONTACTO */
+        .footer {
+            background-color: #8C1D31;
+            color: #FDF8F2;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .footer h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto 25px auto;
+            opacity: 0.9;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366; /* Verde oficial WhatsApp */
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .creditos {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            border-top: 1px solid rgba(253, 248, 242, 0.2);
+            padding-top: 20px;
+        }
+
+        /* CASOS ESPECIALES DE ADAPTACIÓN (RESPONSIVE SEGURO) */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.9rem; /* El título se encoge sutilmente en celular para no desbordar */
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .esencia {
+                flex-direction: column; /* En celular, la foto se pone abajo del texto de forma natural */
+                padding: 50px 20px;
+                gap: 30px;
+            }
+
+            .esencia-texto {
+                text-align: center;
+            }
+
+            .esencia-foto img {
+                max-width: 100%;
+            }
+
+            .vitrina, .footer {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="./logo-limpio.png" alt="Ohana Logo" class="logo-web">
+            <h1>Momentos dulces que unen a la familia</h1>
+            <p>Descubre nuestra repostería artesanal horneada con los mejores ingredientes y mucho amor de hogar.</p>
+            <a href="#vitrina" class="btn">Ver Vitrina de Sabores</a>
+        </div>
+    </section>
+
+    <section class="esencia">
+        <div class="esencia-texto">
+            <h2>Hecho a mano, hecho con amor</h2>
+            <p>En Ohana Postres Artesanales, cada receta se elabora desde cero, cuidando cada detalle para ofrecerte sabores auténticos que te hagan sentir en casa. Creemos que la felicidad no se compra, pero se puede compartir en porciones.</p>
+        </div>
+        <div class="esencia-foto">
+            <img src="./esencia.jpg" alt="Repostera trabajando con amor">
+        </div>
+    </section>
+
+    <section class="vitrina" id="vitrina">
+        <h2>Nuestras Especialidades</h2>
+        
+        <div class="grid-postres">
+            <div class="tarjeta-postre">
+                <img src="./postre1.jpg" alt="Bizcochos Temáticos">
+                <div class="tarjeta-info">
+                    <h3>Bizcochos Temáticos</h3>
+                    <p>El centro de atención de tus celebraciones. Diseños personalizados y el sabor casero ideal para tus cumpleaños.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-postre">
+                <img src="./postre2.jpg" alt="Cupcakes Decorados">
+                <div class="tarjeta-info">
+                    <h3>Cupcakes Decorados</h3>
+                    <p>Porciones individuales de pura felicidad. Perfectos para mesas de dulces, regalos o un antojo especial.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-postre">
+                <img src="./postre3.jpg" alt="Galletas Artesanales">
+                <div class="tarjeta-info">
+                    <h3>Galletas Artesanales</h3>
+                    <p>Crujientes por fuera y espectacularmente suaves por dentro. Hechas con chispas de chocolate premium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <h2>¿Tienes un antojo o evento en agenda?</h2>
+        <p>Escríbenos hoy mismo para cotizar tus postres favoritos o armar tu pedido personalizado.</p>
+        <a href="https://wa.me/tu_numero_aqui" target="_blank" class="btn btn-whatsapp">Encargar por WhatsApp</a>
+        
+        <div class="creditos">
+            <p>&copy; 2026 Ohana Postres Artesanales. Plantilla Demo desarrollada por Katiusca Studio.</p>
+        </div>
+    </section>
+
+</body>
+</html>
