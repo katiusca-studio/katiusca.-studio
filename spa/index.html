@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Centro de Belleza, Estética & Spa Premium</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- VARIABLES DE DISEÑO (Paleta Premium) --- */
+        :root {
+            --primary-dark: #121212;
+            --secondary-dark: #1A1A1A;
+            --accent-gold: #D4AF37;
+            --accent-rose: #E8C5C8;
+            --text-light: #F9F9F9;
+            --text-muted: #BCBCBC;
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition: all 0.4s ease;
+        }
+
+        /* --- RESET & ESTILOS GENERALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-family: var(--font-title);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .section-title span {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: var(--text-light);
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-gold);
+        }
+
+        .cta-nav {
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            padding: 10px 22px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            transition: var(--transition);
+        }
+
+        .cta-nav:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(18, 18, 18, 0.6), rgba(18, 18, 18, 0.9)), 
+                        url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: var(--accent-rose);
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: var(--font-title);
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .hero-title em {
+            font-family: var(--font-title);
+            color: var(--accent-gold);
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 16px 35px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            border: none;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-principal:hover {
+            background-color: var(--text-light);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- SECCIÓN DE SERVICIOS (Grid Sofisticado) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background-color: var(--secondary-dark);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .service-img-wrapper {
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+        }
+
+        .service-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.08);
+        }
+
+        .service-info {
+            padding: 30px;
+        }
+
+        .service-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent-rose);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .service-name {
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            min-height: 65px;
+        }
+
+        .service-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        .service-price {
+            font-family: var(--font-title);
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+        }
+
+        .service-link {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-link:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- AGENDA / ACCIÓN DIRECTA (OVERLAY CORREGIDO) --- */
+        .agenda {
+            background: linear-gradient(rgba(18, 18, 18, 0.35), rgba(18, 18, 18, 0.35)),
+                        url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .agenda-box {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            background-color: rgba(18, 18, 18, 0.65); /* Fondo sutil detrás del texto para garantizar legibilidad perfecta */
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .agenda-box .section-title {
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .agenda-box p {
+            color: #fff;
+            margin-bottom: 35px;
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #25D366;
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+            color: #fff;
+        }
+
+        .btn-whatsapp i {
+            font-size: 1.4rem;
+        }
+
+        /* --- FOOTER & ENLACES RÁPIDOS --- */
+        footer {
+            background-color: #0D0D0D;
+            padding: 60px 0 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-title);
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-rose);
+            padding-left: 5px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .info-item i {
+            color: var(--accent-gold);
+            width: 15px;
+        }
+
+        .rrss {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .rrss a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .rrss a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            border-color: var(--accent-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        /* --- BOTÓN FLOTANTE INTERACTIVO DE WHATSAPP --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 999;
+            font-size: 30px;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            background-color: #20ba5a;
+            color: white;
+        }
+
+        /* --- DISEÑO RESPONSIVO (MOBILE) --- */
+        @media (max-width: 992px) {
+            .hero-title { font-size: 2.8rem; }
+            .nav-links, .cta-nav { display: none; } 
+            .section-title { font-size: 2rem; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title { font-size: 2.2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .container { padding: 40px 0; }
+            .btn-principal, .btn-whatsapp { width: 100%; text-align: center; justify-content: center; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 24px; }
+            .agenda-box { padding: 40px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">AURA<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#agenda">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=10000000000&text=Hola%20Aura%20Spa,%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" class="cta-nav">Agendar Cita</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Bienvenido a la Alta Estética</p>
+            <h1 class="hero-title">Tu bienestar merece un espacio <em>Premium</em></h1>
+            <a href="#servicios" class="btn-principal">Descubrir Experiencias</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="container">
+        <h2 class="section-title">Experiencias de <span>Bienestar</span></h2>
+        
+        <div class="services-grid">
+            <!-- Servicio 1 -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80" alt="Masajes de Relajación" class="service-img">
+                </div>
+                <div class="service-info">
+                    <span class="service-tag">Bienestar Corporal</span>
+                    <h3 class="service-name">Masaje Holístico Premium</h3>
+                    <p class="service-desc">Terapia profunda de relajación con aceites esenciales orgánicos y piedras volcánicas calientes para alinear cuerpo y mente.</p>
+                    <div class="service-footer">
+                        <span class="service-price">$75.00</span>
+                        <a href="https://api.whatsapp.com/send?phone=10000000000&text=Hola,%20me%20interesa%20el%20Masaje%20Hol%C3%ADstico%20Premium" target="_blank" class="service-link">Reservar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Tratamiento Facial" class="service-img">
+                </div>
+                <div class="service-info">
+                    <span class="service-tag">Estética Facial</span>
+                    <h3 class="service-name">Glow Facial Avanzado</h3>
+                    <p class="service-desc">Tratamiento rejuvenecedor con ácido hialurónico y aparatología de última generación para una piel radiante e hidratada.</p>
+                    <div class="service-footer">
+                        <span class="service-price">$90.00</span>
+                        <a href="https://api.whatsapp.com/send?phone=10000000000&text=Hola,%20me%20interesa%20el%20Glow%20Facial%20Avanzado" target="_blank" class="service-link">Reservar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 3 (IMAGEN CORREGIDA) -->
+            <div class="service-card">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Circuito de Spa" class="service-img">
+                </div>
+                <div class="service-info">
+                    <span class="service-tag">Rituales Exclusivos</span>
+                    <h3 class="service-name">Circuito Spa & Champagne</h3>
+                    <p class="service-desc">Acceso exclusivo a zonas de hidromasaje, sauna detox, baño turco y copa de cortesía para una tarde inigualable.</p>
+                    <div class="service-footer">
+                        <span class="service-price">$120.00</span>
+                        <a href="https://api.whatsapp.com/send?phone=10000000000&text=Hola,%20me%20interesa%20el%20Circuito%20Spa%20%26%20Champagne" target="_blank" class="service-link">Reservar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN AGENDA DIRECTA (TRANSPARENCIA AJUSTADA) -->
+    <section id="agenda" class="agenda">
+        <div class="container">
+            <div class="agenda-box">
+                <h2 class="section-title" style="margin-bottom: 20px;">Agenda tu <span>Momento</span></h2>
+                <p>Haz una pausa en tu rutina diaria. Nuestro equipo está listo para ofrecerte una experiencia de lujo completamente personalizada.</p>
+                <a href="https://api.whatsapp.com/send?phone=10000000000&text=Hola!%20Quiero%20agendar%20una%20cita%20en%20el%20Centro%20de%20Est%C3%A9tica%20Premium.%20%C2%BFQu%C3%A9%20disponibilidad%20tienen?" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENLACES RÁPIDOS Y CONTACTO (FOOTER) -->
+    <footer id="contacto">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="logo" style="margin-bottom: 15px;">AURA<span>.</span></h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; font-weight: 300;">Elevando el cuidado personal a una obra de arte. Espacios diseñados para tu desconexión y renovación total.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#servicios">Nuestros Servicios</a></li>
+                    <li><a href="#agenda">Reservar Cita</a></li>
+                    <li><a href="#contacto">Contacto & Ubicación</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <div class="info-item"><i class="fa-solid fa-location-dot"></i> Av. Principal Premium, Suite 101</div>
+                <div class="info-item"><i class="fa-solid fa-phone"></i> +1 (809) 555-0199</div>
+                <div class="info-item"><i class="fa-solid fa-envelope"></i> reservas@auraspa.com</div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem; font-weight: 300;">Acompáñanos en nuestras redes sociales y descubre tips de bienestar.</p>
+                <div class="rrss">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2026 AURA Premium Spa. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- BOTÓN INTERACTIVO FLOTANTE DE WHATSAPP -->
+    <a href="https://api.whatsapp.com/send?phone=10000000000&text=Hola!%20Me%20encuentro%20en%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20hacer%20una%20consulta." class="whatsapp-float" target="_blank" title="Chatea con nosotros">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
