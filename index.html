@@ -16,7 +16,7 @@ body {
 /* PORTADA PARA COMPUTADORAS */
 .hero {
     height: 100vh;
-    background: url('./portada-pc.jpg') no-repeat center center;
+    background: url('portada-pc.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* SERVICIOS */
+/* REJILLA UNIFICADA (SERVICIOS Y PORTAFOLIO) */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -124,13 +124,20 @@ h2 {
     background: #1c1c1c;
     padding: 20px;
     border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 .card:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
-.card img {
+.card img, .card .imagen-contenedor-css {
     width: 100%;
+    height: 380px; /* Formato vertical alargado idéntico para todas */
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -164,135 +171,113 @@ h2 {
 
 <body>
 
-<!-- PORTADA -->
 <section class="hero">
     <div style="position: relative; z-index: 2;">
         <h1>Automatización de Ventas y Vitrinas Digitales Premium 🚀</h1>
-<p>Transformamos tus redes sociales y mensajería en un ecosistema que factura 24/7. Diseño web inteligente, IA y estrategias de Meta Ads para escalar tu negocio.</p>
-       <a href="https://wa.me/18298626357" class="btn">Escríbeme por WhatsApp</a>
+        <p>Transformamos tus redes sociales y mensajería en un ecosistema que factura 24/7. Diseño web inteligente, IA y estrategias de Meta Ads para escalar tu negocio.</p>
+        <a href="https://wa.me/18298626357" class="btn">Escríbeme por WhatsApp</a>
     </div>
 </section>
 
-<!-- SERVICIOS -->
 <section class="section">
     <h2>Mis Servicios</h2>
     <div class="services">
 
         <div class="card">
             <img src="servicio1.jpg">
-           <h3>Optimización de Canales & Ventas</h3>
-<p>Diseñamos tu biografía de Instagram, estructuramos tu catálogo de WhatsApp Business y configuramos respuestas rápidas profesionales para convertir visitantes en clientes.</p>
+            <h3>Optimización de Canales & Ventas</h3>
+            <p>Diseñamos tu biografía de Instagram, estructuramos tu catálogo de WhatsApp Business y configuramos respuestas rápidas profesionales para convertir visitantes en clientes.</p>
         </div>
 
         <div class="card">
             <img src="servicio2.jpg">
             <h3>Asistentes Virtuales con IA</h3>
-<p>Creamos e integramos chatbots avanzados en tu Web e Instagram para responder dudas, cotizar servicios y cerrar ventas de forma instantánea las 24/7.</p>      
-  </div>
+            <p>Creamos e integramos chatbots avanzados en tu Web e Instagram para responder dudas, cotizar servicios y cerrar ventas de forma instantánea las 24/7.</p>      
+        </div>
 
         <div class="card">
             <img src="servicio3.jpg">
             <h3>Desarrollo Web & SEO Local</h3>
-<p>Páginas web ultra rápidas, modernas y adaptadas a móviles. Implementamos SEO con palabras clave para posicionarte en Google y configuramos tu correo empresarial.</p>
+            <p>Páginas web ultra rápidas, modernas y adaptadas a móviles. Implementamos SEO con palabras clave para posicionarte en Google y configuramos tu correo empresarial.</p>
         </div>
 
         <div class="card">
             <img src="servicio4.jpg">
             <h3>Publicidad Digital & Branding</h3>
-<p>Diseñamos la identidad visual completa de tu marca y creamos campañas estratégicas de Meta Ads (Facebook e Instagram) para atraer un flujo constante de clientes.</p>
+            <p>Diseñamos la identidad visual completa de tu marca y creamos campañas estratégicas de Meta Ads (Facebook e Instagram) para atraer un flujo constante de clientes.</p>
         </div>
 
     </div>
 </section>
 
-<!-- PORTAFOLIO -->
 <section class="section">
     <h2>Resultados reales</h2>
     <p>He ayudado a negocios a mejorar su imagen, atraer más clientes y organizar su presencia digital.</p>
-<div class="contenedor-casos" style="max-width: 1100px; margin: 40px auto 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
     
-    <a href="./OHANA/index.html" target="_blank" class="tarjeta-caso" style="text-decoration: none; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(140, 29, 49, 0.4); border-radius: 20px; overflow: hidden; display: block; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 0 15px rgba(140, 29, 49, 0.1);">
-        
-        <div style="width: 100%; height: 200px; background: url('./OHANA/postre1.jpg') no-repeat center center; background-size: cover; position: relative;">
-            <span style="position: absolute; top: 15px; left: 15px; background: #8C1D31; color: #FDF8F2; padding: 6px 14px; font-size: 0.75rem; font-weight: bold; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px;">Proyecto Demo</span>
-        </div>
-        
-        <div style="padding: 25px; text-align: left;">
-            <h3 style="color: #FDF8F2; font-size: 1.4rem; margin-bottom: 10px; font-family: sans-serif;">Ohana Postres Artesanales</h3>
-            <p style="color: #aaaaaa; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">Diseño y desarrollo de una Vitrina Digital Premium para repostería. Enfoque en conversión, estética dulce y navegación ultra-rápida para pedidos automáticos.</p>
-            
-            <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="color: #8C1D31; font-weight: bold; font-size: 0.9rem;">Ver proyecto en vivo →</span>
-                <span style="color: #666666; font-size: 0.85rem;">Nicho: Gastronomía</span>
+    <div class="services">
+
+        <a href="OHANA/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <div class="imagen-contenedor-css" style="background: url('OHANA/postre1.jpg') no-repeat center center; background-size: cover;"></div>
+                    <h3 style="margin-top: 15px;">Ohana Postres</h3>
+                    <p>Vitrina Digital Premium para repostería artesanal. Enfoque en conversión estética, velocidad y automatización de pedidos locales.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
             </div>
-        </div>
-    </a>
+        </a>
+
+        <a href="powerzone-fitness/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="PowerZone Fitness">
+                    <h3 style="margin-top: 15px;">PowerZone Fitness</h3>
+                    <p>One-Page moderna de alta conversión diseñada para gimnasios. Optimización de captación de membresías y agendamiento.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+        <a href="hotel-montecristi/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Hotel Boutique Demo">
+                    <h3 style="margin-top: 15px;">Hotel Boutique Demo</h3>
+                    <p>Web responsiva enfocada en conversión turística y reservas hoteleras. Incluye integración de asistente virtual inteligente.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+        <a href="spa/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Spa Premium">
+                    <h3 style="margin-top: 15px;">Estética & Spa Premium</h3>
+                    <p>One-Page sofisticada de diseño minimalista y elegante. Optimizada para captación directa mediante sistema visual conectado a WhatsApp.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+        <a href="restaurante/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200" alt="Bistró & Co.">
+                    <h3 style="margin-top: 15px;">Bistró & Co. | Menú Gourmet</h3>
+                    <p>Menú digital premium optimizado para móviles con integración interactiva de Nancy, un chatbot nativo en JavaScript para reservas.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
 
     </div>
-<!-- TARJETA DEMO: GIMNASIO POWERZONE -->
-<a href="./powerzone-fitness/" style="text-decoration: none; color: inherit;">
-    <div style="background-color: #121216; border: 1px solid #ff3e3e; border-radius: 8px; padding: 20px; transition: transform 0.3s ease; cursor: pointer;">
-        <!-- Imagen automática desde internet para que no uses Canva -->
-        <div style="width: 100%; height: 180px; overflow: hidden; border-radius: 6px; margin-bottom: 15px;">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600" alt="PowerZone Fitness" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        
-        <!-- Información del Demo -->
-        <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin-bottom: 8px; text-transform: uppercase; color: #ffffff;">PowerZone Fitness</h3>
-        <p style="color: #a0a0a9; font-size: 0.9rem; margin-bottom: 15px;">One-Page moderna y de alta conversión diseñada para gimnasios y centros deportivos. Enfoque dinámico con enlaces de acción rápida.</p>
-        
-        <!-- Etiqueta de Categoría -->
-        <span style="display: inline-block; background-color: rgba(255, 62, 62, 0.1); color: #ff3e3e; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Gimnasio / Fitness</span>
-    </div>
-<!-- Tarjeta Enlace del Hotel Boutique (Enfoque Montecristi) -->
-<a href="hotel/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="tarjeta-proyecto" style="background: #1F2421; border: 1px solid #E2B276; border-radius: 15px; overflow: hidden; transition: all 0.3s ease; height: 100%;">
-        <!-- Trae la foto automáticamente: Usando una de las imágenes del demo -->
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Demo Hotel Montecristi" style="width: 100%; height: 200px; object-fit: cover;">
-        
-        <div style="padding: 1.5rem;">
-            <!-- Brilla con elegancia: Título con el dorado del Morro -->
-            <h3 style="font-family: 'Playfair Display', serif; color: #E2B276; font-size: 1.4rem; margin-bottom: 0.5rem;">Hotel Boutique Demo</h3>
-            <p style="font-family: 'Montserrat', sans-serif; color: #FFF; font-size: 0.9rem; line-height: 1.4; opacity: 0.9;">
-                One-Page responsiva enfocada en conversión turística. Incluye asistente virtual con Inteligencia Artificial (Nancy) para automatizar reservas de habitaciones y excursiones a los cayos.
-            </p>
-            <span style="display: inline-block; margin-top: 1rem; color: #E2B276; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
-                Prototipo de IA En Vivo <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 5px;"></i>
-            </span>
-        </div>
-    </div>
-</a>
-<!-- Tarjeta Enlace del Spa Premium -->
-<a href="./spa/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="tarjeta-proyecto" style="background: #1F2421; border: 1px solid #8C1D31; border-radius: 15px; overflow: hidden; margin-bottom: 2rem;">
-        <!-- Trae la foto automáticamente -->
-        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Spa Premium" style="width: 100%; height: auto; display: block;">
-        
-        <div style="padding: 1.5rem;">
-            <!-- Título con la tipografía elegante de tus proyectos -->
-            <h3 style="font-family: 'Playfair Display', serif; color: #E2B276; font-size: 1.4rem; margin-bottom: 0.5rem; font-weight: normal;">Centro de Belleza, Estética & Spa Premium</h3>
-            
-            <!-- Descripción -->
-            <p style="font-family: 'Montserrat', sans-serif; color: #FFF; font-size: 0.9rem; line-height: 1.4; opacity: 0.8; margin-bottom: 1rem;">One-Page sofisticada y de alta conversión con un diseño minimalista y elegante. Optimizada para la captación directa de clientes mediante un sistema visual interactivo conectado a WhatsApp.</p>
-            
-            <!-- Etiqueta inferior -->
-            <span style="display: inline-block; color: #E2B276; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px;">BIENESTAR / ESTÉTICA PREMIUM</span>
-        </div>
-    </div>
-</a>
 </section>
 
-<!-- CONTACTO -->
 <section class="section contact">
     <h2>Contáctame</h2>
-
-    <a href="https://wa.me/18298365511" class="btn">
-        📲 Escríbeme por WhatsApp
-    </a>
-
-    <a href="https://instagram.com/katiusca_studio" target="_blank" class="btn-instagram">
-        📸 Ver mi Instagram
-    </a>
+    <a href="https://wa.me/18298365511" class="btn">📲 Escríbeme por WhatsApp</a>
+    <a href="https://instagram.com/katiusca_studio" target="_blank" class="btn-instagram">📸 Ver mi Instagram</a>
 </section>
 
 <script>
