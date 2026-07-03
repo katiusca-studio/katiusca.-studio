@@ -1,287 +1,580 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katiusca Digital Studio</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Nellys - Catálogo Premium | Katiusca Studio</title>
+    <style>
+        /* CONFIGURACIÓN Y PALETA DE COLORES LUXURY */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f0f0f;
-    color: white;
-}
+        body {
+            background-color: #f5e6eb; /* Fondo de oro rosa sutil */
+            color: #2b2527;
+            padding-bottom: 80px;
+            position: relative;
+            min-height: 100vh;
+        }
 
-/* PORTADA PARA COMPUTADORAS */
-.hero {
-    height: 100vh;
-    background: url('portada-pc.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
+        /* HEADER INTEGRAL CON LOGO DISEÑADO */
+        header.main-header {
+            background: linear-gradient(135deg, #d91c76, #910047);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 6px 20px rgba(145, 0, 71, 0.15);
+            margin-bottom: 30px;
+        }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: 1;
-}
+        /* DISEÑO COLECTIVO DEL LOGO NELLYS */
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            color: #910047;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+            border: 2px solid #f7cadb;
+        }
 
-/* CAMBIO AUTOMÁTICO PARA CELULARES */
-@media (max-width: 768px) {
-    .hero {
-        background: url('movil.jpg') no-repeat center center !important;
-        background-size: cover !important;
-        /* Esto empuja los textos hacia la parte de arriba del celular */
-        align-items: flex-start !important; 
-    }
-    
-    .hero::before {
-        background: rgba(0, 0, 0, 0.5) !important; 
-    }
+        .brand-logo span {
+            color: #d91c76;
+            margin-left: 5px;
+        }
 
-    /* Espacio para que el título no pegue al borde de la pantalla arriba */
-    .hero div {
-        padding-top: 50px !important;
-    }
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 6px;
+            font-style: italic;
+        }
 
-    .hero h1 {
-        font-size: 28px !important;
-        padding: 0 15px !important;
-        margin-bottom: 8px !important;
-    }
+        /* DISEÑO DE ESCRITORIO INTELIGENTE (GRID DE 3 COLUMNAS) */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .hero p {
-        font-size: 15px !important;
-        padding: 0 20px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .btn {
-        margin-top: 5px !important;
-    }
-}
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 25px;
+        }
 
-.hero div {
-    position: relative;
-    z-index: 2;
-}
+        /* CONTENEDORES BASE */
+        .container-section {
+            background: #ffffff;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(184, 0, 95, 0.04);
+            border-radius: 20px;
+            height: fit-content;
+        }
 
-.hero h1 {
-    font-size: 50px;
-    text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
-}
+        h2.section-title {
+            font-size: 1.15rem;
+            color: #910047;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #fdf0f4;
+            padding-bottom: 8px;
+        }
 
-.hero p {
-    font-size: 20px;
-}
+        /* MENÚ LATERAL DE CATEGORÍAS */
+        .categories-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-.btn {
-    background: linear-gradient(45deg, #ff4d88, #ff1a66);
-    padding: 14px 30px;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 20px;
-    font-weight: bold;
-}
-.btn-instagram {
-    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-    padding: 14px 30px;
-    color: black;
-    text-decoration: none;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: bold;
-}
-/* SECCIONES */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
+        .cat-chip {
+            background: #fff0f5;
+            color: #d91c76;
+            border: 1px solid #f7cadb;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
 
-h2 {
-    margin-bottom: 30px;
-}
+        .cat-chip:hover, .cat-chip.active {
+            background: #d91c76;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(217, 28, 118, 0.2);
+            transform: translateX(3px);
+        }
 
-/* REJILLA UNIFICADA (SERVICIOS Y PORTAFOLIO) */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+        /* SECCIÓN DE COMBOS (DESTACADO) */
+        .offer-card {
+            background: #ffffff;
+            border: 2px dashed #d91c76;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
 
-.card {
-    background: #1c1c1c;
-    padding: 20px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-.card:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-.card img, .card .imagen-contenedor-css {
-    width: 100%;
-    height: 380px; /* Formato vertical alargado idéntico para todas */
-    object-fit: cover;
-    border-radius: 10px;
-}
+        .offer-img {
+            width: 100%;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
 
-/* CONTACTO */
-.contact a {
-    display: block;
-    margin: 10px;
-    color: #ff4d88;
-}
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    animation: fadeIn 1s ease-in;
-}
+        /* REJILLA DINÁMICA DE PRODUCTOS */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.btn, .btn-instagram {
-    color: white !important;
-}
-</style>
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #f2e1e6;
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+        }
+
+        .product-img-container {
+            width: 100%;
+            height: 140px;
+            background-color: #faf5f7;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 6px;
+        }
+
+        .product-img.cover {
+            object-fit: cover;
+        }
+
+        .product-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #403538;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        /* BOTONES PREMIUM DE ACCIÓN */
+        .buy-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #d91c76, #910047);
+            color: #fff;
+            border: none;
+            padding: 11px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .buy-btn.gold {
+            background: linear-gradient(135deg, #ffbc00, #d99a00);
+            color: #2b2527;
+        }
+
+        /* ==========================================
+           BURBUJA Y VENTANA DEL ASISTENTE VIRTUAL (NANCY SIMULATOR)
+           ========================================== */
+        .chat-bubble {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #00e676, #00b0ff); /* Simula WhatsApp/Instagram core */
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-window {
+            position: fixed;
+            bottom: 95px;
+            right: 25px;
+            width: 320px;
+            height: 420px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            border: 1px solid #f2e1e6;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #d91c76, #910047);
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chat-avatar {
+            width: 35px;
+            height: 35px;
+            background: #fff;
+            color: #d91c76;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .chat-header-info h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .chat-header-info p {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            background: #f9f5f6;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 0.85rem;
+        }
+
+        .msg {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 15px;
+            line-height: 1.4;
+        }
+
+        .msg.bot {
+            background: #ffffff;
+            color: #2b2527;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .msg.user {
+            background: #d91c76;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .chat-footer {
+            padding: 10px;
+            background: #fff;
+            border-top: 1px solid #f2e1e6;
+            display: flex;
+            gap: 8px;
+        }
+
+        .chat-footer input {
+            flex: 1;
+            border: 1px solid #f2e1e6;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            outline: none;
+        }
+
+        .chat-footer button {
+            background: #d91c76;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVO PARA TELÉFONOS */
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .categories-menu {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 8px;
+            }
+
+            .cat-chip {
+                padding: 10px 16px;
+                border-radius: 30px;
+                white-space: nowrap;
+            }
+            
+            .cat-chip:hover, .cat-chip.active {
+                transform: none;
+            }
+
+            .chat-window {
+                width: calc(100% - 40px);
+                right: 20px;
+                bottom: 90px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<section class="hero">
-    <div style="position: relative; z-index: 2;">
-        <h1>Automatización de Ventas y Vitrinas Digitales Premium 🚀</h1>
-        <p>Transformamos tus redes sociales y mensajería en un ecosistema que factura 24/7. Diseño web inteligente, IA y estrategias de Meta Ads para escalar tu negocio.</p>
-        <a href="https://wa.me/18298626357" class="btn">Escríbeme por WhatsApp</a>
+    <!-- LOGO CORREGIDO Y CABECERA GLAMOUR -->
+    <header class="main-header">
+        <div class="brand-logo">Nellys<span>Supply</span></div>
+        <p>Tu Suplidora de Confianza | Catálogo de Soluciones</p>
+    </header>
+
+    <!-- INTERFAZ PRINCIPAL -->
+    <main class="main-layout">
+        
+        <!-- COLUMNA IZQUIERDA: MENÚ DE FILTROS INTERACTIVOS -->
+        <aside class="container-section">
+            <h2 class="section-title">Categorías</h2>
+            <div class="categories-menu">
+                <div class="cat-chip active" onclick="filterCategory('all', this)">✨ Ver Todo</div>
+                <div class="cat-chip" onclick="filterCategory('ampollas', this)">💧 Líneas de Ampollas</div>
+                <div class="cat-chip" onclick="filterCategory('color', this)">🎨 Tintes y Color</div>
+                <div class="cat-chip" onclick="filterCategory('equipos', this)">🔌 Equipos Eléctricos</div>
+            </div>
+        </aside>
+
+        <!-- SECCIONES DE CONTENIDO -->
+        <div class="content-grid">
+            
+            <!-- COLUMNA CENTRAL: SECCIÓN DE COMBOS CONSTANTE -->
+            <section class="container-section">
+                <h2 class="section-title">🌟 Especial del Mes</h2>
+                <div class="offer-card">
+                    <img src="combos.jpg" alt="Combo Especial" class="offer-img">
+                    <div class="product-name" style="font-weight:700;">Línea Alfaparf Moisture Completa</div>
+                    <button class="buy-btn gold" onclick="simulateBotInteraction('Combo Alfaparf Moisture')">Consultar Variedades y Precios</button>
+                </div>
+            </section>
+
+            <!-- COLUMNA DERECHA: APARADOR DINÁMICO DE ÍTEMS -->
+            <section class="container-section">
+                <h2 class="section-title" id="catalog-title">Líneas de Tratamiento</h2>
+                
+                <div class="products-grid" id="products-container">
+                    
+                    <!-- Ítem 1: Ampollas -->
+                    <div class="product-card" data-category="ampollas">
+                        <div class="product-img-container">
+                            <img src="ampollas.jpg" alt="Ampollas" class="product-img">
+                        </div>
+                        <div class="product-name">Ampollas Salerm Vital Estructural y Lociones</div>
+                        <button class="buy-btn" onclick="simulateBotInteraction('Ampollas Salerm Vital')">Ver Marcas y Precios</button>
+                    </div>
+
+                    <!-- Ítem 2: Protectores -->
+                    <div class="product-card" data-category="ampollas">
+                        <div class="product-img-container">
+                            <img src="protectores.jpg" alt="Protectores térmicos" class="product-img cover">
+                        </div>
+                        <div class="product-name">Protectores Térmicos (Salerm, Alfaparf y más)</div>
+                        <button class="buy-btn" onclick="simulateBotInteraction('Protectores Térmicos')">Ver Opciones</button>
+                    </div>
+
+                    <!-- Ítem 3: Tintes -->
+                    <div class="product-card" data-category="color">
+                        <div class="product-img-container">
+                            <img src="tintes.jpg" alt="Tintes" class="product-img cover">
+                        </div>
+                        <div class="product-name">Tintes Profesionales (Igora Royal y Variedades)</div>
+                        <button class="buy-btn" onclick="simulateBotInteraction('Tintes Profesionales Igora')">Ver Carta de Color</button>
+                    </div>
+
+                    <!-- Ítem 4: Secador -->
+                    <div class="product-card" data-category="equipos">
+                        <div class="product-img-container">
+                            <img src="secador de mesa.jpg" alt="Secador de mesa" class="product-img">
+                        </div>
+                        <div class="product-name">Secadores de Mesa y Herramientas de Salón</div>
+                        <button class="buy-btn" onclick="simulateBotInteraction('Secador de Mesa')">Ver Modelos Disp.</button>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- BURBUJA FLOTANTE DE NANCY -->
+    <div class="chat-bubble" onclick="toggleChat()">💬</div>
+
+    <!-- VENTANA DEL ASISTENTE SIMULADO -->
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <div class="chat-avatar">N</div>
+            <div class="chat-header-info">
+                <h4>Nancy Asistente ✨</h4>
+                <p>Simulador de Flujo Inteligente</p>
+            </div>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="msg bot">¡Hola! Soy Nancy, el asistente virtual de Nellys Supply. 🌟 ¿Te interesa consultar precios o reportar un pago de mercancía? Te puedo mostrar cómo funciona mi automatización.</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Escribe un mensaje de prueba..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendUserMessage()">Enviar</button>
+        </div>
     </div>
-</section>
 
-<section class="section">
-    <h2>Mis Servicios</h2>
-    <div class="services">
+    <!-- LÓGICA JAVASCRIPT: FILTROS Y SIMULACIÓNConversacional -->
+    <script>
+        // 1. Filtrar Categorías en el Catálogo
+        function filterCategory(category, element) {
+            document.querySelectorAll('.cat-chip').forEach(chip => {
+                chip.classList.remove('active');
+            });
+            element.classList.add('active');
 
-        <div class="card">
-            <img src="servicio1.jpg">
-            <h3>Optimización de Canales & Ventas</h3>
-            <p>Diseñamos tu biografía de Instagram, estructuramos tu catálogo de WhatsApp Business y configuramos respuestas rápidas profesionales para convertir visitantes en clientes.</p>
-        </div>
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
 
-        <div class="card">
-            <img src="servicio2.jpg">
-            <h3>Asistentes Virtuales con IA</h3>
-            <p>Creamos e integramos chatbots avanzados en tu Web e Instagram para responder dudas, cotizar servicios y cerrar ventas de forma instantánea las 24/7.</p>      
-        </div>
+            const title = document.getElementById('catalog-title');
+            if(category === 'all') title.innerText = "Líneas de Tratamiento";
+            if(category === 'ampollas') title.innerText = "Tratamientos y Ampollas";
+            if(category === 'color') title.innerText = "Coloración Profesional";
+            if(category === 'equipos') title.innerText = "Aparatos y Equipos";
+        }
 
-        <div class="card">
-            <img src="servicio3.jpg">
-            <h3>Desarrollo Web & SEO Local</h3>
-            <p>Páginas web ultra rápidas, modernas y adaptadas a móviles. Implementamos SEO con palabras clave para posicionarte en Google y configuramos tu correo empresarial.</p>
-        </div>
+        // 2. Control de Apertura/Cierre del Chat Flotante
+        function toggleChat() {
+            const chatWin = document.getElementById('chat-window');
+            if(chatWin.style.display === 'none' || chatWin.style.display === '') {
+                chatWin.style.display = 'flex';
+            } else {
+                chatWin.style.display = 'none';
+            }
+        }
 
-        <div class="card">
-            <img src="servicio4.jpg">
-            <h3>Publicidad Digital & Branding</h3>
-            <p>Diseñamos la identidad visual completa de tu marca y creamos campañas estratégicas de Meta Ads (Facebook e Instagram) para atraer un flujo constante de clientes.</p>
-        </div>
+        // 3. Simulación de Botón del Catálogo disparando al Bot
+        function simulateBotInteraction(itemName) {
+            toggleChat(); // Abre la ventana del chat de inmediato
+            const chatBody = document.getElementById('chat-body');
+            
+            // Añadir mensaje del usuario simulado
+            appendMessage(`Hola Nancy, vi en el catálogo: "${itemName}" y quiero consultar marcas disponibles y precios de envío.`, 'user');
+            
+            // Respuesta automática del bot simulando ManyChat/Lógica conversacional
+            setTimeout(() => {
+                appendMessage(`¡Excelente elección! 💗 Para la línea de <strong>${itemName}</strong> manejamos precios de oferta al por mayor. ¿Deseas que te envíe la lista de precios en PDF o prefieres que un asesor te cotice directamente en WhatsApp?`, 'bot');
+            }, 1000);
+        }
 
-    </div>
-</section>
+        // 4. Manejo del Chat manual escrito por el cliente
+        function sendUserMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if(!text) return;
 
-<section class="section">
-    <h2>Resultados reales</h2>
-    <p>He ayudado a negocios a mejorar su imagen, atraer más clientes y organizar su presencia digital.</p>
-    
-    <div class="services">
+            appendMessage(text, 'user');
+            input.value = '';
 
-        <a href="OHANA/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card">
-                <div>
-                    <div class="imagen-contenedor-css" style="background: url('OHANA/postre1.jpg') no-repeat center center; background-size: cover;"></div>
-                    <h3 style="margin-top: 15px;">Ohana Postres</h3>
-                    <p>Vitrina Digital Premium para repostería artesanal. Enfoque en conversión estética, velocidad y automatización de pedidos locales.</p>
-                </div>
-                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
-            </div>
-        </a>
+            // Lógica simple de respuestas simuladas para la demo
+            setTimeout(() => {
+                const lowerText = text.toLowerCase();
+                if(lowerText.includes('pago') || lowerText.includes('comprobante') || lowerText.includes('reportar')) {
+                    appendMessage('Perfecto. Envíanos la foto de tu transferencia bancaria por este medio. Inmediatamente la reciba, te pediré tu Nombre y Dirección de Envío para agendar tu despacho hoy mismo en República Dominicana. 🇩🇴', 'bot');
+                } else if(lowerText.includes('precio') || lowerText.includes('cuanto cuesta')) {
+                    appendMessage('Los precios varían según la marca (Alfaparf, Salerm, Igora). Al presionar el producto en el catálogo superior puedes ver los rangos o escribir la palabra "ASESOR" para comunicarte directamente.', 'bot');
+                } else {
+                    appendMessage('¡Entendido! Esto es una simulación en vivo del sistema automatizado que construimos en Katiusca Studio para optimizar la atención de tu Supply las 24 horas. 🚀', 'bot');
+                }
+            }, 1000);
+        }
 
-        <a href="powerzone-fitness/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="PowerZone Fitness">
-                    <h3 style="margin-top: 15px;">PowerZone Fitness</h3>
-                    <p>One-Page moderna de alta conversión diseñada para gimnasios. Optimización de captación de membresías y agendamiento.</p>
-                </div>
-                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
-            </div>
-        </a>
+        function handleKeyPress(event) {
+            if(event.key === 'Enter') sendUserMessage();
+        }
 
-        <a href="hotel/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Hotel Boutique Demo">
-                    <h3 style="margin-top: 15px;">Hotel Boutique Demo</h3>
-                    <p>Web responsiva enfocada en conversión turística y reservas hoteleras. Incluye integración de asistente virtual inteligente.</p>
-                </div>
-                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
-            </div>
-        </a>
+        function appendMessage(text, sender) {
+            const chatBody = document.getElementById('chat-body');
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('msg', sender);
+            msgDiv.innerHTML = text;
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll al último mensaje
+        }
+    </script>
 
-        <a href="spa/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Spa Premium">
-                    <h3 style="margin-top: 15px;">Estética & Spa Premium</h3>
-                    <p>One-Page sofisticada de diseño minimalista y elegante. Optimizada para captación directa mediante sistema visual conectado a WhatsApp.</p>
-                </div>
-                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
-            </div>
-        </a>
-
-        <a href="restaurante/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200" alt="Bistró & Co.">
-                    <h3 style="margin-top: 15px;">Bistró & Co. | Menú Gourmet</h3>
-                    <p>Menú digital premium optimizado para móviles con integración interactiva de Nancy, un chatbot nativo en JavaScript para reservas.</p>
-                </div>
-                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
-            </div>
-        </a>
-
-    </div>
-</section>
-
-<section class="section contact">
-    <h2>Contáctame</h2>
-    <a href="https://wa.me/18298365511" class="btn">📲 Escríbeme por WhatsApp</a>
-    <a href="https://instagram.com/katiusca_studio" target="_blank" class="btn-instagram">📸 Ver mi Instagram</a>
-</section>
-
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="C8zF-AlBGFiljkkhnwMOg";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
 </body>
 </html>
