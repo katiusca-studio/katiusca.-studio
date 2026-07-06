@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katiusca Digital Studio</title>
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+/* PORTADA PARA COMPUTADORAS */
+.hero {
+    height: 100vh;
+    background: url('portada-pc.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+/* CAMBIO AUTOMÁTICO PARA CELULARES */
+@media (max-width: 768px) {
+    .hero {
+        background: url('movil.jpg') no-repeat center center !important;
+        background-size: cover !important;
+        /* Esto empuja los textos hacia la parte de arriba del celular */
+        align-items: flex-start !important; 
+    }
+    
+    .hero::before {
+        background: rgba(0, 0, 0, 0.5) !important; 
+    }
+
+    /* Espacio para que el título no pegue al borde de la pantalla arriba */
+    .hero div {
+        padding-top: 50px !important;
+    }
+
+    .hero h1 {
+        font-size: 28px !important;
+        padding: 0 15px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .hero p {
+        font-size: 15px !important;
+        padding: 0 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .btn {
+        margin-top: 5px !important;
+    }
+}
+
+.hero div {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 50px;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ff4d88, #ff1a66);
+    padding: 14px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.btn-instagram {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    padding: 14px 30px;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* SECCIONES */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+/* REJILLA UNIFICADA (SERVICIOS Y PORTAFOLIO) */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.card img, .card .imagen-contenedor-css {
+    width: 100%;
+    height: 380px; /* Formato vertical alargado idéntico para todas */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTACTO */
+.contact a {
+    display: block;
+    margin: 10px;
+    color: #ff4d88;
+}
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.btn, .btn-instagram {
+    color: white !important;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div style="position: relative; z-index: 2;">
+        <h1>Automatización de Ventas y Vitrinas Digitales Premium 🚀</h1>
+        <p>Transformamos tus redes sociales y mensajería en un ecosistema que factura 24/7. Diseño web inteligente, IA y estrategias de Meta Ads para escalar tu negocio.</p>
+        <a href="https://wa.me/18298626357" class="btn">Escríbeme por WhatsApp</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Mis Servicios</h2>
+    <div class="services">
+
+        <div class="card">
+            <img src="servicio1.jpg">
+            <h3>Optimización de Canales & Ventas</h3>
+            <p>Diseñamos tu biografía de Instagram, estructuramos tu catálogo de WhatsApp Business y configuramos respuestas rápidas profesionales para convertir visitantes en clientes.</p>
+        </div>
+
+        <div class="card">
+            <img src="servicio2.jpg">
+            <h3>Asistentes Virtuales con IA</h3>
+            <p>Creamos e integramos chatbots avanzados en tu Web e Instagram para responder dudas, cotizar servicios y cerrar ventas de forma instantánea las 24/7.</p>      
+        </div>
+
+        <div class="card">
+            <img src="servicio3.jpg">
+            <h3>Desarrollo Web & SEO Local</h3>
+            <p>Páginas web ultra rápidas, modernas y adaptadas a móviles. Implementamos SEO con palabras clave para posicionarte en Google y configuramos tu correo empresarial.</p>
+        </div>
+
+        <div class="card">
+            <img src="servicio4.jpg">
+            <h3>Publicidad Digital & Branding</h3>
+            <p>Diseñamos la identidad visual completa de tu marca y creamos campañas estratégicas de Meta Ads (Facebook e Instagram) para atraer un flujo constante de clientes.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2>Resultados reales</h2>
+    <p>He ayudado a negocios a mejorar su imagen, atraer más clientes y organizar su presencia digital.</p>
+    
+    <div class="services">
+
+        <a href="OHANA/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <div class="imagen-contenedor-css" style="background: url('OHANA/postre1.jpg') no-repeat center center; background-size: cover;"></div>
+                    <h3 style="margin-top: 15px;">Ohana Postres</h3>
+                    <p>Vitrina Digital Premium para repostería artesanal. Enfoque en conversión estética, velocidad y automatización de pedidos locales.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+        <a href="powerzone-fitness/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="PowerZone Fitness">
+                    <h3 style="margin-top: 15px;">PowerZone Fitness</h3>
+                    <p>One-Page moderna de alta conversión diseñada para gimnasios. Optimización de captación de membresías y agendamiento.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+        <a href="hotel/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Hotel Boutique Demo">
+                    <h3 style="margin-top: 15px;">Hotel Boutique Demo</h3>
+                    <p>Web responsiva enfocada en conversión turística y reservas hoteleras. Incluye integración de asistente virtual inteligente.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+        <a href="spa/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Spa Premium">
+                    <h3 style="margin-top: 15px;">Estética & Spa Premium</h3>
+                    <p>One-Page sofisticada de diseño minimalista y elegante. Optimizada para captación directa mediante sistema visual conectado a WhatsApp.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+        <a href="restaurante/index.html" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <div class="card">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200" alt="Bistró & Co.">
+                    <h3 style="margin-top: 15px;">Bistró & Co. | Menú Gourmet</h3>
+                    <p>Menú digital premium optimizado para móviles con integración interactiva de Nancy, un chatbot nativo en JavaScript para reservas.</p>
+                </div>
+                <span style="color: #ff4d88; font-weight: bold; font-size: 0.9rem; display: block; margin-top: 15px;">Ver Proyecto →</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="section contact">
+    <h2>Contáctame</h2>
+    <a href="https://wa.me/18298365511" class="btn">📲 Escríbeme por WhatsApp</a>
+    <a href="https://instagram.com/katiusca_studio" target="_blank" class="btn-instagram">📸 Ver mi Instagram</a>
+</section>
+
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="C8zF-AlBGFiljkkhnwMOg";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>
