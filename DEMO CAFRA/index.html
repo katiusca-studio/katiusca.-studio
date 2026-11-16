@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferretería Cafra | Materiales, Cerámicas y Construcción en Montecristi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --cafra-green: #1E8E1E;
+            --cafra-green-dark: #146314;
+            --cafra-green-light: #29B529;
+            --cafra-neon: #4ADE80;
+            --bg-dark: #0A0D0A;
+            --bg-card: #141914;
+            --bg-card-hover: #1B221B;
+            --text-main: #F4F7F4;
+            --text-muted: #A3B1A3;
+            --border-color: rgba(30, 142, 30, 0.28);
+            --gold-bf: #FACC15;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .brand-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* TOP BANNER BLACK FRIDAY */
+        .top-promo {
+            background: linear-gradient(90deg, var(--cafra-green-dark), var(--cafra-green), var(--cafra-green-dark));
+            color: #fff;
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .top-promo span {
+            background: #000;
+            color: var(--gold-bf);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+            font-weight: 800;
+        }
+
+        /* NAVBAR */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 13, 10, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.45rem;
+            color: var(--cafra-green-light);
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .logo-sub {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.25s;
+        }
+
+        nav a:hover {
+            color: var(--cafra-green-light);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .agency-top-tag {
+            font-size: 0.74rem;
+            color: var(--cafra-neon);
+            background: rgba(30, 142, 30, 0.14);
+            border: 1px solid rgba(74, 222, 128, 0.45);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .nav-cta {
+            background: var(--cafra-green);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.86rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(30, 142, 30, 0.35);
+            white-space: nowrap;
+        }
+
+        .nav-cta:hover {
+            background: var(--cafra-green-light);
+            transform: translateY(-2px);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            padding: 70px 20px 80px;
+            background: radial-gradient(circle at 80% 20%, rgba(30, 142, 30, 0.22), transparent 50%),
+                linear-gradient(180deg, #0D130D 0%, #0A0D0A 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .badge-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(30, 142, 30, 0.16);
+            border: 1px solid var(--cafra-green);
+            color: var(--cafra-neon);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 4.5vw, 3.3rem);
+            font-weight: 900;
+            line-height: 1.12;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: var(--cafra-green-light);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.08rem;
+            margin-bottom: 30px;
+            max-width: 560px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn-primary {
+            background: var(--cafra-green);
+            color: #fff;
+            padding: 15px 26px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--cafra-green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 142, 30, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            padding: 15px 24px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            border: 1.5px solid var(--cafra-green);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(30, 142, 30, 0.15);
+        }
+
+        .hero-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 24px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 18px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: #0D110D;
+            padding: 12px 8px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .stat-item strong {
+            display: block;
+            color: var(--cafra-green-light);
+            font-size: 1.15rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stat-item span {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+        }
+
+        /* BENEFICIOS BAR */
+        .benefits-bar {
+            max-width: 1200px;
+            margin: -30px auto 50px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .benefit-box {
+            background: #131913;
+            border: 1px solid var(--border-color);
+            padding: 18px 20px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .benefit-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(30, 142, 30, 0.18);
+            color: var(--cafra-neon);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-box h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .benefit-box p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* SECCION CATALOGO BLACK FRIDAY */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .section-tag {
+            color: var(--cafra-green-light);
+            font-weight: 800;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            font-weight: 800;
+        }
+
+        /* FILTROS DINAMICOS */
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.86rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--cafra-green);
+            color: #fff;
+            border-color: var(--cafra-green);
+        }
+
+        /* GRID DE PRODUCTOS */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 24px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--cafra-green-light);
+        }
+
+        .product-img-wrap {
+            position: relative;
+            height: 200px;
+            background: #1d241d;
+        }
+
+        .product-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bf-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #000;
+            color: var(--gold-bf);
+            border: 1px solid var(--gold-bf);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .product-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-cat {
+            font-size: 0.75rem;
+            color: var(--cafra-neon);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .product-title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .price-now {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .price-old {
+            font-size: 0.88rem;
+            color: #7c8a7c;
+            text-decoration: line-through;
+        }
+
+        .btn-quote {
+            width: 100%;
+            background: rgba(30, 142, 30, 0.16);
+            color: var(--cafra-neon);
+            border: 1px solid var(--cafra-green);
+            padding: 11px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-quote:hover {
+            background: var(--cafra-green);
+            color: #fff;
+        }
+
+        /* SECCION MAYORISTAS & CREDICAFRA */
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin-top: 20px;
+        }
+
+        .feature-panel {
+            background: linear-gradient(145deg, #131B13, #0D120D);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 36px;
+        }
+
+        .feature-panel h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .feature-panel p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-bottom: 26px;
+        }
+
+        .check-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.92rem;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            background: var(--cafra-green);
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* CALCULADORA RAPIDA DE COTIZACION */
+        .calc-box {
+            background: var(--bg-card);
+            border: 1px solid var(--cafra-green);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .calc-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .calc-box select,
+        .calc-box input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #2b382b;
+            background: #0A0D0A;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        /* FOOTER & SELLO KATIUSCA STUDIO (CON ESPACIO INFERIOR PARA NO SER TAPADO POR EL BOT) */
+        footer {
+            background: #060806;
+            border-top: 1px solid var(--border-color);
+            padding: 50px 20px 105px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--cafra-green-light);
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .agency-watermark {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .agency-badge {
+            background: rgba(30, 142, 30, 0.24);
+            border: 1.5px solid var(--cafra-green-light);
+            color: #fff;
+            padding: 9px 18px;
+            border-radius: 50px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 18px rgba(30, 142, 30, 0.3);
+        }
+
+        /* CHATBOT FLOTANTE DE IA (DEMO INTERACTIVA) */
+        .chat-launcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--cafra-green);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 13px 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(30, 142, 30, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 2000;
+            transition: transform 0.25s;
+        }
+
+        .chat-launcher:hover {
+            transform: scale(1.05);
+            background: var(--cafra-green-light);
+        }
+
+        .chat-window {
+            position: fixed;
+            bottom: 82px;
+            right: 20px;
+            width: 350px;
+            max-width: calc(100vw - 32px);
+            background: #111611;
+            border: 1px solid var(--cafra-green);
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 2001;
+        }
+
+        .chat-window.open {
+            display: flex;
+        }
+
+        .chat-header {
+            background: var(--cafra-green);
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header-info strong {
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .chat-header-info span {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+
+        .chat-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        .chat-messages {
+            padding: 16px;
+            height: 290px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .msg {
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            max-width: 85%;
+            line-height: 1.45;
+        }
+
+        .msg.bot {
+            background: #1B241B;
+            color: #fff;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+
+        .msg.user {
+            background: var(--cafra-green);
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+
+        .quick-replies {
+            padding: 8px 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            background: #0D110D;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .quick-chip {
+            background: rgba(30, 142, 30, 0.2);
+            border: 1px solid var(--cafra-green);
+            color: var(--cafra-neon);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.74rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .quick-chip:hover {
+            background: var(--cafra-green);
+            color: #fff;
+        }
+
+        .chat-input-area {
+            display: flex;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            background: #0B0E0B;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 0.86rem;
+            outline: none;
+        }
+
+        .chat-input-area button {
+            background: var(--cafra-green);
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        @media (max-width: 960px) {
+            nav ul {
+                display: none;
+            }
+        }
+
+        @media (max-width: 860px) {
+
+            .hero-grid,
+            .split-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .agency-top-tag {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BARRA SUPERIOR BLACK FRIDAY -->
+    <div class="top-promo">
+        <span>BLACK FRIDAY CAFRA</span> Descuentos reales hasta el 30 de Noviembre • Envíos GRATIS en el municipio de
+        Montecristi
+    </div>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-box">
+                <!-- LOGO SVG INSPIRADO EN EL ROMBO VERDE DE CAFRA -->
+                <svg width="42" height="42" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="30" y="2" width="39.6" height="39.6" rx="4" transform="rotate(45 30 2)" fill="#1E8E1E" />
+                    <rect x="30" y="9" width="29.7" height="29.7" rx="2" transform="rotate(45 30 9)" fill="#FFFFFF" />
+                    <rect x="30" y="14" width="22.6" height="22.6" rx="2" transform="rotate(45 30 14)" fill="#1E8E1E" />
+                    <path
+                        d="M34.5 25.5C33.4 24.3 31.8 23.6 30 23.6C26.5 23.6 23.8 26.4 23.8 30C23.8 33.6 26.5 36.4 30 36.4C31.8 36.4 33.4 35.7 34.5 34.5"
+                        stroke="white" stroke-width="3.6" stroke-linecap="round" />
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-title">CAFRA</span>
+                    <span class="logo-sub">Materiales & Ferretería</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#ofertas">Ofertas Black Friday</a></li>
+                    <li><a href="#mayoristas">Ventas al Por Mayor</a></li>
+                    <li><a href="#credicafra">CrediCafra</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <span class="agency-top-tag">Propuesta: Katiusca Studio</span>
+                <a href="https://wa.me/18296792715?text=Hola%20Ferreter%C3%ADa%20Cafra%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20r%C3%A1pida."
+                    target="_blank" class="nav-cta">
+                    📲 Cotizar Directo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div>
+                <div class="badge-location">📍 San Fernando de Montecristi & Toda la Línea Noroeste</div>
+                <h1>Todo para tu proyecto y ferretería en <span>un solo lugar</span></h1>
+                <p>
+                    Desde cemento, varillas y cerámicas de pared hasta equipamiento completo para baños y herramientas
+                    eléctricas. Despacho inmediato al detalle y al por mayor sin intermediarios.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#ofertas" class="btn-primary">🔥 Ver Ofertas Black Friday</a>
+                    <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20tengo%20una%20ferreter%C3%ADa%20o%20constructora%20y%20quiero%20precios%20al%20por%20mayor."
+                        target="_blank" class="btn-secondary">🏢 Soy Mayorista / Constructora</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80"
+                    alt="Materiales de construcción Ferretería Cafra">
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>+5,000</strong>
+                        <span>Artículos en stock</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>24/48h</strong>
+                        <span>Ruta Línea Noroeste</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>100%</strong>
+                        <span>Precios con ITBIS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA DE BENEFICIOS -->
+    <div class="benefits-bar">
+        <div class="benefits-grid">
+            <div class="benefit-box">
+                <div class="benefit-icon">🚚</div>
+                <div>
+                    <h4>Envíos Línea Noroeste</h4>
+                    <p>Gratis en el municipio de Montecristi</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon">🧾</div>
+                <div>
+                    <h4>Precios Transparentes</h4>
+                    <p>Cotizaciones claras con ITBIS incluido</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon">💳</div>
+                <div>
+                    <h4>Paga como quieras</h4>
+                    <p>Tarjeta, transferencia o CrediCafra</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon">⚡</div>
+                <div>
+                    <h4>Atención Inmediata</h4>
+                    <p>Asesoría directa por WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATÁLOGO BLACK FRIDAY INTERACTIVO -->
+    <section class="section" id="ofertas">
+        <div class="section-header">
+            <div>
+                <span class="section-tag">Catálogo Digital en Vivo</span>
+                <h2>Especial Black Friday en Cafra</h2>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterProducts('todos', this)">Todos</button>
+                <button class="filter-btn" onclick="filterProducts('ceramicas', this)">Cerámicas y Baños</button>
+                <button class="filter-btn" onclick="filterProducts('construccion', this)">Construcción</button>
+                <button class="filter-btn" onclick="filterProducts('herramientas', this)">Herramientas</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="productsContainer">
+            <!-- Producto 1 -->
+            <div class="product-card" data-category="ceramicas">
+                <div class="product-img-wrap">
+                    <span class="bf-badge">Black Friday -22%</span>
+                    <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=700&q=80"
+                        alt="Cerámica de Pared">
+                </div>
+                <div class="product-body">
+                    <span class="product-cat">Cerámicas y Baños</span>
+                    <h3 class="product-title">Cerámica de Pared Brillante (m²)</h3>
+                    <p class="product-desc">Acabado rectificado de alta resistencia para cocinas y baños modernos.
+                        Disponibilidad inmediata en tienda.</p>
+                    <div class="price-row">
+                        <span class="price-now">RD$ 450</span>
+                        <span class="price-old">RD$ 580</span>
+                    </div>
+                    <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20me%20interesa%20la%20oferta%20de%20Cer%C3%A1mica%20de%20Pared%20a%20RD%24450%2Fm2."
+                        target="_blank" class="btn-quote">
+                        🛒 Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card" data-category="ceramicas">
+                <div class="product-img-wrap">
+                    <span class="bf-badge">Combo Baño</span>
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80"
+                        alt="Combo Inodoro y Lavamanos">
+                </div>
+                <div class="product-body">
+                    <span class="product-cat">Cerámicas y Baños</span>
+                    <h3 class="product-title">Combo Inodoro One-Piece + Lavamanos</h3>
+                    <p class="product-desc">Porcelana sanitaria de descarga ecológica dual flush con asiento de cierre
+                        suave y herrajes incluidos.</p>
+                    <div class="price-row">
+                        <span class="price-now">RD$ 8,950</span>
+                        <span class="price-old">RD$ 11,400</span>
+                    </div>
+                    <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20quiero%20cotizar%20el%20Combo%20Inodoro%20%2B%20Lavamanos%20de%20Black%20Friday."
+                        target="_blank" class="btn-quote">
+                        🛒 Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card" data-category="construccion">
+                <div class="product-img-wrap">
+                    <span class="bf-badge">Precio Obra</span>
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80"
+                        alt="Cemento Gris">
+                </div>
+                <div class="product-body">
+                    <span class="product-cat">Construcción Pesada</span>
+                    <h3 class="product-title">Cemento Gris Portland Tipo I (42.5 kg)</h3>
+                    <p class="product-desc">Máxima resistencia estructural para losas, columnas y bloques. Descuentos
+                        especiales por paleta completa.</p>
+                    <div class="price-row">
+                        <span class="price-now">RD$ 495</span>
+                        <span class="price-old">RD$ 540</span>
+                    </div>
+                    <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20necesito%20cotizar%20fundas%20de%20Cemento%20Gris%20en%20oferta."
+                        target="_blank" class="btn-quote">
+                        🛒 Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card" data-category="herramientas">
+                <div class="product-img-wrap">
+                    <span class="bf-badge">Black Friday -25%</span>
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=700&q=80"
+                        alt="Taladro Percutor">
+                </div>
+                <div class="product-body">
+                    <span class="product-cat">Herramientas Eléctricas</span>
+                    <h3 class="product-title">Taladro Percutor Inalámbrico 20V</h3>
+                    <p class="product-desc">Incluye 2 baterías de litio, cargador rápido y maletín de brocas para
+                        concreto, madera y metal.</p>
+                    <div class="price-row">
+                        <span class="price-now">RD$ 5,200</span>
+                        <span class="price-old">RD$ 6,900</span>
+                    </div>
+                    <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20me%20interesa%20el%20Taladro%20Percutor%2020V%20de%20Black%20Friday."
+                        target="_blank" class="btn-quote">
+                        🛒 Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="product-card" data-category="construccion">
+                <div class="product-img-wrap">
+                    <span class="bf-badge">Stock Mayorista</span>
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=700&q=80"
+                        alt="Pintura Acrílica">
+                </div>
+                <div class="product-body">
+                    <span class="product-cat">Pinturas y Acabados</span>
+                    <h3 class="product-title">Cubeta Pintura Acrílica Exterior/Interior (5 Gal)</h3>
+                    <p class="product-desc">Alta cobertura, lavable y resistente al sol y salitre de Montecristi.
+                        Variedad de tonos disponibles.</p>
+                    <div class="price-row">
+                        <span class="price-now">RD$ 4,350</span>
+                        <span class="price-old">RD$ 5,100</span>
+                    </div>
+                    <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20quiero%20cotizar%20la%20cubeta%20de%20pintura%20de%205%20galones."
+                        target="_blank" class="btn-quote">
+                        🛒 Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="product-card" data-category="ceramicas">
+                <div class="product-img-wrap">
+                    <span class="bf-badge">Oferta Flash</span>
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=700&q=80"
+                        alt="Porcelanato">
+                </div>
+                <div class="product-body">
+                    <span class="product-cat">Pisos y Porcelanatos</span>
+                    <h3 class="product-title">Porcelanato Tipo Mármol 60x60 cm (m²)</h3>
+                    <p class="product-desc">Tráfico pesado comercial y residencial. Brillo espejo de fácil limpieza y
+                        junta mínima.</p>
+                    <div class="price-row">
+                        <span class="price-now">RD$ 690</span>
+                        <span class="price-old">RD$ 850</span>
+                    </div>
+                    <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20quiero%20cotizar%20Porcelanato%2060x60%20en%20oferta."
+                        target="_blank" class="btn-quote">
+                        🛒 Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAYORISTAS & CREDICAFRA -->
+    <section class="section" id="mayoristas">
+        <div class="split-section">
+            <!-- PANEL MAYORISTAS -->
+            <div class="feature-panel">
+                <span class="section-tag">Canal Corporativo</span>
+                <h3>¿Tienes una ferretería o constructora?</h3>
+                <p>
+                    Distribuimos al por mayor cemento, block, varillas y cerámicas a ferreterías, depósitos de
+                    materiales y obras en toda la Línea Noroeste.
+                </p>
+                <ul class="check-list">
+                    <li>Precios preferenciales por volumen y paleta</li>
+                    <li>Despacho programado directo a tu negocio u obra</li>
+                    <li>Asesor comercial dedicado a tu cuenta</li>
+                    <li>Facturación con comprobante fiscal (NCF)</li>
+                </ul>
+                <a href="https://wa.me/18296792715?text=Hola%20Cafra%2C%20deseo%20registrarme%20como%20cliente%20Mayorista%20en%20la%20L%C3%ADnea%20Noroeste."
+                    target="_blank" class="btn-primary">
+                    Solicitar Lista de Precios Mayorista
+                </a>
+            </div>
+
+            <!-- PANEL CREDICAFRA + CALCULADORA -->
+            <div class="feature-panel" id="credicafra">
+                <span class="section-tag">Financiamiento Directo</span>
+                <h3>Construye hoy con CrediCafra</h3>
+                <p>
+                    No detengas tu remodelación ni tu obra. Calcula un estimado rápido de tus materiales y solicita
+                    evaluación de crédito en minutos.
+                </p>
+
+                <div class="calc-box">
+                    <h4 style="margin-bottom: 12px; font-size: 0.95rem;">🧮 Simulador Rápido de Pedido</h4>
+                    <div class="calc-row">
+                        <select id="calcMaterial">
+                            <option value="450">Cerámica Pared (RD$ 450/m²)</option>
+                            <option value="690">Porcelanato 60x60 (RD$ 690/m²)</option>
+                            <option value="495">Cemento Gris (RD$ 495/funda)</option>
+                            <option value="4350">Pintura 5 Galones (RD$ 4,350)</option>
+                        </select>
+                        <input type="number" id="calcQty" value="20" min="1" placeholder="Cantidad">
+                    </div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+                        <div>
+                            <span style="font-size:0.78rem; color:var(--text-muted);">Total Estimado (ITBIS
+                                inc.):</span>
+                            <div id="calcTotal" style="font-size:1.3rem; font-weight:900; color:var(--cafra-neon);">RD$
+                                9,000</div>
+                        </div>
+                        <button onclick="sendCalcToWhatsApp()" class="btn-primary"
+                            style="padding:10px 16px; font-size:0.84rem;">
+                            Enviar Cotización
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CON UBICACIÓN Y SELLO DE AGENCIA -->
+    <footer id="ubicacion">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>FERRETERÍA CAFRA</h4>
+                <p>Tu aliado líder en materiales de construcción, cerámicas, baños y ferretería general en San Fernando
+                    de Montecristi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Ubicación & Horarios</h4>
+                <p>📍 San Fernando de Montecristi, Rep. Dom.</p>
+                <p>🕒 Lunes a Viernes: 8:00 AM – 5:30 PM</p>
+                <p>🕒 Sábados: 8:00 AM – 2:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto Directo</h4>
+                <a href="https://wa.me/18296792715" target="_blank">📲 WhatsApp: +1 (829) 679-2715</a>
+                <a href="https://instagram.com/ferreteriacafra" target="_blank">📸 Instagram: @ferreteriacafra</a>
+            </div>
+        </div>
+
+        <div class="agency-watermark">
+            <span>© 2026 Ferretería Cafra. Todos los derechos reservados.</span>
+            <span class="agency-badge">✨ Demo Interactiva diseñada por Katiusca Studio</span>
+        </div>
+    </footer>
+
+    <!-- CHATBOT FLOTANTE EN JAVASCRIPT (SIMULACIÓN DE IA) -->
+    <button class="chat-launcher" onclick="toggleChat()">
+        🤖 Asistente Cafra IA
+    </button>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <strong>Asistente Virtual Cafra</strong>
+                <span>🟢 En línea • Respuesta inmediata</span>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">×</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+                ¡Hola! 👋 Bienvenido a <strong>Ferretería Cafra</strong> en Montecristi. Soy tu asistente virtual. ¿En
+                qué puedo ayudarte hoy?
+            </div>
+        </div>
+
+        <div class="quick-replies">
+            <button class="quick-chip" onclick="sendQuickReply('Ofertas Black Friday')">🔥 Ofertas Black Friday</button>
+            <button class="quick-chip" onclick="sendQuickReply('Ventas al por mayor')">🏢 Precios Mayorista</button>
+            <button class="quick-chip" onclick="sendQuickReply('Info CrediCafra')">💳 CrediCafra</button>
+            <button class="quick-chip" onclick="sendQuickReply('Ubicación y horario')">📍 Horario y Ubicación</button>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Escribe tu consulta aquí..." onkeypress="handleEnter(event)">
+            <button onclick="sendUserMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. FILTRO DINÁMICO DE PRODUCTOS
+        function filterProducts(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 2. CALCULADORA EN TIEMPO REAL
+        const calcMaterial = document.getElementById('calcMaterial');
+        const calcQty = document.getElementById('calcQty');
+        const calcTotal = document.getElementById('calcTotal');
+
+        function updateCalc() {
+            const price = parseFloat(calcMaterial.value);
+            const qty = parseInt(calcQty.value) || 0;
+            const total = price * qty;
+            calcTotal.textContent = 'RD$ ' + total.toLocaleString('es-DO');
+        }
+
+        calcMaterial.addEventListener('change', updateCalc);
+        calcQty.addEventListener('input', updateCalc);
+
+        function sendCalcToWhatsApp() {
+            const materialText = calcMaterial.options[calcMaterial.selectedIndex].text;
+            const qty = calcQty.value;
+            const total = calcTotal.textContent;
+            const msg = `Hola Ferretería Cafra, hice un cálculo en su web: ${qty} unidades de ${materialText}. Total estimado: ${total}. ¿Me confirman disponibilidad?`;
+            window.open(`https://wa.me/18296792715?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        // 3. CHATBOT INTERACTIVO EN JAVASCRIPT
+        function toggleChat() {
+            document.getElementById('chatWindow').classList.toggle('open');
+        }
+
+        function appendMessage(text, sender) {
+            const container = document.getElementById('chatMessages');
+            const div = document.createElement('div');
+            div.className = `msg ${sender}`;
+            div.innerHTML = text;
+            container.appendChild(div);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function getBotResponse(input) {
+            const text = input.toLowerCase();
+            if (text.includes('black') || text.includes('oferta') || text.includes('descuento')) {
+                return '🔥 ¡Tenemos ofertas de <strong>Black Friday</strong> hasta el 30 de noviembre! Cerámica de pared desde RD$450/m², combos de baño y herramientas con hasta 25% de descuento.';
+            }
+            if (text.includes('mayor') || text.includes('ferreteria') || text.includes('constructora')) {
+                return '🏢 Contamos con despacho al por mayor en toda la <strong>Línea Noroeste</strong> (cemento, varillas, bloques y cerámicas). Escríbenos directo al <a href="https://wa.me/18296792715?text=Hola%20quiero%20atencion%20mayorista" target="_blank" style="color:#4ADE80;">WhatsApp Mayorista aquí</a>.';
+            }
+            if (text.includes('credi') || text.includes('credito') || text.includes('financiamiento')) {
+                return '💳 Con <strong>CrediCafra</strong> puedes financiar tus materiales de construcción o remodelación. Solo necesitas tu cédula y comprobante de ingresos en tienda.';
+            }
+            if (text.includes('ubicacion') || text.includes('horario') || text.includes('donde')) {
+                return '📍 Estamos en <strong>San Fernando de Montecristi</strong>. Abrimos de Lunes a Viernes de 8:00 AM a 5:30 PM y Sábados hasta las 2:00 PM. ¡Envío gratis en el municipio!';
+            }
+            if (text.includes('cemento') || text.includes('ceramica') || text.includes('precio')) {
+                return '🧱 Tenemos stock inmediato. Puedes usar nuestra calculadora en la página o pedir cotización directa con un asesor al <a href="https://wa.me/18296792715" target="_blank" style="color:#4ADE80;">+1 (829) 679-2715</a>.';
+            }
+            return '¡Con gusto te ayudo! Para darte precios exactos de inventario o coordinar un envío en Montecristi, haz clic aquí para hablar con un asesor: <a href="https://wa.me/18296792715" target="_blank" style="color:#4ADE80; font-weight:bold;">Abrir WhatsApp de Cafra</a>.';
+        }
+
+        function sendQuickReply(topic) {
+            appendMessage(topic, 'user');
+            setTimeout(() => {
+                appendMessage(getBotResponse(topic), 'bot');
+            }, 450);
+        }
+
+        function sendUserMessage() {
+            const input = document.getElementById('chatInput');
+            const val = input.value.trim();
+            if (!val) return;
+            appendMessage(val, 'user');
+            input.value = '';
+            setTimeout(() => {
+                appendMessage(getBotResponse(val), 'bot');
+            }, 500);
+        }
+
+        function handleEnter(e) {
+            if (e.key === 'Enter') sendUserMessage();
+        }
+    </script>
+</body>
+
+</html>
