@@ -1,0 +1,1111 @@
+/* ==================== VARIABLES Y RESET ==================== */
+:root {
+    --primary-color: #d32f2f;
+    /* Rojo noticias clásico */
+    --dark-bg: #111111;
+    --text-main: #222222;
+    --text-muted: #666666;
+    --bg-light: #f8f9fa;
+    --border-color: #e5e5e5;
+
+    --font-serif: 'Merriweather', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --container-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== 1. TOP BAR ==================== */
+.top-bar {
+    background-color: var(--dark-bg);
+    color: #cccccc;
+    font-size: 0.825rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #222;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: #cccccc;
+    margin-left: 12px;
+    font-size: 0.95rem;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ==================== MAIN HEADER / BANNER DE FONDO ==================== */
+.main-header {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    /* Altura equilibrada para portales de noticias */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/* Capa oscura (Overlay) para dar contraste y legibilidad */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+
+.main-header-content {
+    position: relative;
+    z-index: 2;
+    /* Coloca el logo por encima de la capa oscura */
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    display: inline-block;
+}
+
+.logo-img {
+    max-height: 85px;
+    /* Controla la altura del logo sin deformarlo */
+    width: auto;
+    display: block;
+    /* Sombra suave y resalte para que el logo "flote" con elegancia */
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.7));
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.02);
+}
+
+/* ==================== 3. NAV MENU ==================== */
+.main-navigation {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--dark-bg);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.search-trigger {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+.search-trigger:hover {
+    color: var(--primary-color);
+}
+
+/* ==================== 4. NEWS TICKER ==================== */
+.news-ticker {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    padding: 8px 0;
+}
+
+.ticker-content {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ticker-label {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    white-space: nowrap;
+    margin-right: 15px;
+    letter-spacing: 0.5px;
+}
+
+.ticker-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.ticker-items {
+    display: inline-block;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker-items a {
+    margin-right: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.ticker-items a:hover {
+    color: var(--primary-color);
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ==================== HERO SECTION ==================== */
+.main-content {
+    padding: 30px 0;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* 1. Carrusel Estilos */
+.hero-carousel {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-swiper {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+}
+
+.hero-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero-slide:hover img {
+    transform: scale(1.03);
+}
+
+.slide-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 25px 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: #ffffff;
+}
+
+.badge {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.slide-overlay h2 {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.slide-overlay h2 a:hover {
+    color: #e0e0e0;
+}
+
+.slide-meta {
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+
+/* Personalizar botones del Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff !important;
+    background: rgba(0, 0, 0, 0.5);
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1rem !important;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color) !important;
+}
+
+/* 2. Columna Doble Estilos */
+.hero-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.column-title {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.column-title span {
+    position: relative;
+}
+
+.column-title span::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.mini-card {
+    margin-bottom: 18px;
+}
+
+.card-img {
+    width: 100%;
+    height: 130px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mini-card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+.card-info h4 {
+    font-family: var(--font-serif);
+    font-size: 0.925rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.card-info h4 a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsivo para tablets/móviles */
+@media (max-width: 992px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== TIRA HORIZONTAL REGIONALES ==================== */
+.horizontal-strip-section {
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+
+.grid-4-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.strip-card .card-img {
+    height: 160px;
+}
+
+.card-tag {
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.strip-card .card-info h4 {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 5px 0;
+}
+
+.strip-card .card-info h4 a:hover {
+    color: var(--primary-color);
+}
+
+.post-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ==================== ÁREA PRINCIPAL CON SIDEBAR STICKY ==================== */
+.content-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 35px;
+    align-items: start;
+}
+
+/* Feed de Noticias */
+.feed-card {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.feed-img {
+    height: 160px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.feed-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feed-card:hover .feed-img img {
+    transform: scale(1.05);
+}
+
+.feed-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin: 6px 0 10px;
+}
+
+.feed-content h3 a:hover {
+    color: var(--primary-color);
+}
+
+.excerpt {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.page-link:hover,
+.page-link.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.page-link.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.page-dots {
+    color: var(--text-muted);
+}
+
+/* ==================== SIDEBAR STICKY ==================== */
+.sidebar-sticky {
+    position: sticky;
+    top: 20px;
+}
+
+.widget {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 25px;
+}
+
+.widget-title {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 2px solid var(--dark-bg);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.station-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-main);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-banner-placeholder {
+    height: 250px;
+    background-color: #eaeaea;
+    border: 1px dashed #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 992px) {
+    .grid-4-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content-with-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .feed-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   ESTILOS UNIFICADOS DE PLANTILLAS INTERNAS Y COMENTARIOS (KATIUSCA STUDIO)
+   ========================================================================== */
+
+/* 1. NOTICIA INDIVIDUAL (SINGLE.PHP) Y PÁGINAS (PAGE.PHP) */
+.single-post-container,
+.single-page-section,
+.category-archive-section,
+.search-results-section,
+.error-404-section {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.single-header,
+.page-header {
+    margin-bottom: 20px;
+}
+
+.single-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.single-title {
+    font-size: 2.2rem;
+    font-family: 'Merriweather', serif;
+    color: #111111;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.single-author-bar {
+    font-size: 0.9rem;
+    color: #666666;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.single-featured-image,
+.page-featured-img {
+    margin-bottom: 25px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.single-featured-image img,
+.page-featured-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.single-body-text,
+.page-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #222222;
+    margin-bottom: 30px;
+}
+
+.single-body-text p,
+.page-body p {
+    margin-bottom: 18px;
+}
+
+.single-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.single-tags-list span a {
+    background: #f4f4f4;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: #333333;
+    text-decoration: none;
+}
+
+.single-tags-list span a:hover {
+    background: var(--katiusca-primary, #e60000);
+    color: #ffffff;
+}
+
+.single-nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.single-nav-links a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #111111;
+    text-decoration: none;
+}
+
+.single-nav-links a:hover {
+    color: var(--katiusca-primary, #e60000);
+}
+
+/* 2. SECCIÓN DE COMENTARIOS (COMMENTS.PHP) */
+.comments-area {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #eeeeee;
+}
+
+.comments-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+
+.comment-list .comment {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e5e5;
+}
+
+.comment-list .children {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 15px;
+    border-left: 2px solid var(--katiusca-primary, #e60000);
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.comment-author img {
+    border-radius: 50%;
+}
+
+.comment-meta {
+    font-size: 0.8rem;
+    color: #777777;
+    margin-bottom: 12px;
+}
+
+.comment-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.reply a {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--katiusca-primary, #e60000);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Formulario de Comentarios */
+#respond {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    margin-top: 30px;
+}
+
+#reply-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+.comment-form p {
+    margin-bottom: 15px;
+}
+
+.comment-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333333;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus,
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--katiusca-primary, #e60000);
+    background: #ffffff;
+}
+
+.comment-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.comment-form .required {
+    color: var(--katiusca-primary, #e60000);
+}
+
+/* ==========================================================================
+   NAVEGACIÓN STICKY (STICKY HEADER)
+   ========================================================================== */
+html,
+body {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+}
+
+.site-header {
+    position: relative !important;
+    z-index: 9999 !important;
+    overflow: visible !important;
+}
+
+.main-navigation {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99999 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ==========================================================================
+   ESTILOS DEFINITIVOS Y EXCLUSIVOS PARA EL FOOTER Y SUS TARJETAS
+   ========================================================================== */
+footer.site-footer {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    margin-top: 50px !important;
+}
+
+footer.site-footer .footer-categories {
+    background-color: #1a1a1a !important;
+    padding: 35px 0 !important;
+    border-bottom: 1px solid #282828 !important;
+}
+
+/* Títulos de Categorías del Footer (TECNOLOGÍA, SALUD, DEPORTES, ETC.) */
+footer.site-footer .footer-col .widget-title,
+footer.site-footer .footer-col .light-widget-title,
+footer.site-footer .footer-widget-title {
+    color: #ff3333 !important;
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 2px solid #ff3333 !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 15px !important;
+    display: inline-block !important;
+}
+
+/* TARJETAS OSCURAS (Aplica tanto para el widget nuevo como para mini-posts) */
+footer.site-footer .footer-custom-card,
+footer.site-footer .footer-mini-post {
+    background-color: #242424 !important;
+    border: 1px solid #333333 !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Imágenes dentro de las tarjetas del footer */
+footer.site-footer .footer-card-img,
+footer.site-footer .footer-mini-post .card-img {
+    height: 120px !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+    overflow: hidden !important;
+    border-radius: 3px !important;
+}
+
+footer.site-footer .footer-card-img img,
+footer.site-footer .footer-mini-post .card-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* TÍTULOS DE LAS NOTICIAS (TEXTO BLANCO BRILLANTE Y NÍTIDO) */
+footer.site-footer .footer-custom-card h5,
+footer.site-footer .footer-mini-post h5 {
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+footer.site-footer .footer-custom-card h5 a,
+footer.site-footer .footer-mini-post h5 a,
+footer.site-footer .footer-col a {
+    color: #ffffff !important;
+    font-family: var(--font-serif, serif) !important;
+    font-size: 0.92rem !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: block !important;
+}
+
+/* Efecto hover rojo al pasar el cursor */
+footer.site-footer .footer-custom-card h5 a:hover,
+footer.site-footer .footer-mini-post h5 a:hover,
+footer.site-footer .footer-col a:hover {
+    color: #ff3333 !important;
+}
+
+/* Créditos del Footer */
+footer.site-footer .footer-bottom {
+    background-color: #0d0d0d !important;
+    padding: 18px 0 !important;
+    color: #888888 !important;
+}
+
+/* ==========================================================================
+   AJUSTE RESPONSIVO PARA EL VIDEO EN DISPOSITIVOS MÓVILES
+   ========================================================================== */
+@media (max-width: 992px) {
+
+    /* La barra lateral deja de ser sticky en móviles para no tapar contenido */
+    .sidebar-sticky {
+        position: static !important;
+    }
+
+    /* En pantallas pequeñas, limitamos la altura máxima del Short para mejor navegación */
+    .shorts-container {
+        max-width: 300px;
+        margin: 0 auto;
+        padding-bottom: 150%;
+        /* Altura más cómoda para pantallas táctiles */
+    }
+}
+
+/* ==========================================================================
+   ESTILOS PARA LA ENCUESTA EN TIEMPO REAL
+   ========================================================================== */
+.sidebar-poll-widget {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333333 !important;
+    border-radius: 6px !important;
+    padding: 18px !important;
+    color: #ffffff !important;
+}
+
+.sidebar-poll-widget .widget-title {
+    color: #ffffff !important;
+    border-bottom: 2px solid var(--katiusca-primary, #e60000) !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 6px !important;
+}
+
+.poll-question {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #dddddd;
+}
+
+.poll-option-label {
+    display: block;
+    background: #242424;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.poll-option-label:hover {
+    background: #2a2a2a;
+}
+
+.poll-bar {
+    position: relative;
+    background: #111;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.poll-fill {
+    background: var(--katiusca-primary, #e60000);
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.poll-pct {
+    font-size: 0.75rem;
+    color: #aaa;
+    display: block;
+    text-align: right;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   CORRECCIÓN UNIFORME PARA EL CARRUSEL HERO (EVITAR FOTOS ESTIRADAS)
+   ========================================================================== */
+
+/* 1. Fijar una altura equilibrada y elegante para el carrusel */
+.main-swiper {
+    width: 100% !important;
+    height: 380px !important;
+    /* Altura controlada y estética */
+    min-height: 380px !important;
+}
+
+/* 2. Forzar a que todas las imágenes encajen perfectamente rellenando el espacio */
+.hero-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000000;
+    /* Fondo negro elegante por si la foto carga lento */
+}
+
+.hero-slide img {
+    width: 100% !important;
+    height: 380px !important;
+    object-fit: cover !important;
+    /* Corta los excedentes proporcionalmente sin deformar */
+    object-position: center !important;
+    /* Centra la imagen para que siempre muestre lo importante */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* ==========================================================================
+   GRILLA DE EMISORAS CON IMÁGENES
+   ========================================================================== */
+.radio-grid-network {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas de imágenes */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.radio-grid-network .wp-block-image {
+    margin: 0 !important;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.2s ease;
+}
+
+.radio-grid-network .wp-block-image:hover {
+    transform: scale(1.03);
+    border-color: var(--katiusca-primary, #e60000);
+}
+
+.radio-grid-network img {
+    width: 100% !important;
+    height: 80px !important;
+    object-fit: cover !important;
+    display: block;
+}

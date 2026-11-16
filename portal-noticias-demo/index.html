@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Noticias | Katiusca Studio</title>
+
+    <!-- Tipografía elegante y legible para noticias (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos de RemixIcon (para redes sociales y elementos visuales) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER COMPLETO ==================== -->
+    <header class="site-header">
+
+        <!-- 1. Top Bar (Fecha y Redes Sociales) -->
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="current-date" id="current-date">
+                    <!-- Se llena automáticamente con JavaScript -->
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Cabecera Principal (Banner de Fondo + Logo Flotante) -->
+        <div class="main-header" style="background-image: url('https://picsum.photos/1920/250?random=100');">
+            <div class="header-overlay"></div>
+            <div class="container main-header-content">
+                <div class="site-logo">
+                    <a href="#">
+                        <!-- Logo en imagen transparente con sombra de resalte -->
+                        <img src="https://via.placeholder.com/280x80/transparent/ffffff?text=KATIUSCA+STUDIO"
+                            alt="Katiusca Studio" class="logo-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- 3. Menú Principal de Categorías -->
+        <nav class="main-navigation">
+            <div class="container nav-content">
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#">Nacionales</a></li>
+                    <li><a href="#">Internacionales</a></li>
+                    <li><a href="#">Tecnología</a></li>
+                    <li><a href="#">Regionales</a></li>
+                    <li><a href="#">Salud</a></li>
+                    <li><a href="#">Deportes</a></li>
+                </ul>
+                <button class="search-trigger" aria-label="Buscar">
+                    <i class="ri-search-line"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- 4. News Ticker (Última Hora) -->
+        <div class="news-ticker">
+            <div class="container ticker-content">
+                <span class="ticker-label">ÚLTIMA HORA</span>
+                <div class="ticker-wrapper">
+                    <div class="ticker-items" id="ticker-items">
+                        <a href="#">• Gobierno anuncia nuevo programa de inversión en infraestructura digital.</a>
+                        <a href="#">• Descubren avances clave en energía renovable durante cumbre global.</a>
+                        <a href="#">• La tecnología local impulsa el crecimiento de las startups regionales.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- ==================== SECCIÓN PRINCIPAL / HERO ==================== -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- Bloque Hero: Carrusel + Columna Doble -->
+            <section class="hero-section">
+
+                <!-- 1. Carrusel Interactivo (Noticias Destacadas) -->
+                <div class="hero-carousel">
+                    <div class="swiper main-swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide hero-slide">
+                                <img src="https://picsum.photos/800/500?random=1" alt="Noticia Principal 1">
+                                <div class="slide-overlay">
+                                    <span class="badge">DESTACADO</span>
+                                    <h2><a href="#">Lanzamiento histórico: La infraestructura tecnológica regional se
+                                            expande a nuevos horizontes</a></h2>
+                                    <p class="slide-meta"><i class="ri-time-line"></i> Hace 2 horas</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide hero-slide">
+                                <img src="https://picsum.photos/800/500?random=2" alt="Noticia Principal 2">
+                                <div class="slide-overlay">
+                                    <span class="badge">DESTACADO</span>
+                                    <h2><a href="#">Nuevas políticas de desarrollo sostenible transforman los centros
+                                            urbanos</a></h2>
+                                    <p class="slide-meta"><i class="ri-time-line"></i> Hace 4 horas</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide hero-slide">
+                                <img src="https://picsum.photos/800/500?random=3" alt="Noticia Principal 3">
+                                <div class="slide-overlay">
+                                    <span class="badge">DESTACADO</span>
+                                    <h2><a href="#">Inversión sin precedentes en proyectos de innovación y cultura
+                                            local</a>
+                                    </h2>
+                                    <p class="slide-meta"><i class="ri-time-line"></i> Hace 6 horas</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Controles del Carrusel -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- 2. Columna Doble (Nacionales + Tecnología) -->
+                <div class="hero-columns">
+
+                    <!-- Columna 1: Nacionales -->
+                    <div class="category-column">
+                        <h3 class="column-title"><span>Nacionales</span></h3>
+
+                        <article class="mini-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=4" alt="Nacionales 1">
+                            </div>
+                            <div class="card-info">
+                                <h4><a href="#">Avanzan las obras viales clave para la conectividad en la zona
+                                        central</a>
+                                </h4>
+                            </div>
+                        </article>
+
+                        <article class="mini-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=5" alt="Nacionales 2">
+                            </div>
+                            <div class="card-info">
+                                <h4><a href="#">Presentan informe económico trimestral con proyecciones positivas</a>
+                                </h4>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Columna 2: Tecnología -->
+                    <div class="category-column">
+                        <h3 class="column-title"><span>Tecnología</span></h3>
+
+                        <article class="mini-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=6" alt="Tecnología 1">
+                            </div>
+                            <div class="card-info">
+                                <h4><a href="#">El impacto de las herramientas de IA en el desarrollo web moderno</a>
+                                </h4>
+                            </div>
+                        </article>
+
+                        <article class="mini-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=7" alt="Tecnología 2">
+                            </div>
+                            <div class="card-info">
+                                <h4><a href="#">Nuevos dispositivos prometen revolucionar el consumo energético</a></h4>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- 1. Tira Horizontal Superior: REGIONALES (4 Entradas) -->
+            <section class="horizontal-strip-section">
+                <h3 class="column-title"><span>Regionales</span></h3>
+
+                <div class="grid-4-columns">
+                    <article class="strip-card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/400/250?random=10" alt="Regionales 1">
+                        </div>
+                        <div class="card-info">
+                            <span class="card-tag">SANTIAGO</span>
+                            <h4><a href="#">Inauguran nuevo centro comunitario para el fomento de la cultura y las
+                                    artes</a></h4>
+                            <p class="post-date"><i class="ri-calendar-line"></i> 8 Oct, 2026</p>
+                        </div>
+                    </article>
+
+                    <article class="strip-card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/400/250?random=11" alt="Regionales 2">
+                        </div>
+                        <div class="card-info">
+                            <span class="card-tag">PUNTA CANA</span>
+                            <h4><a href="#">Sector turístico reporta cifras récord de visitantes durante este
+                                    trimestre</a></h4>
+                            <p class="post-date"><i class="ri-calendar-line"></i> 8 Oct, 2026</p>
+                        </div>
+                    </article>
+
+                    <article class="strip-card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/400/250?random=12" alt="Regionales 3">
+                        </div>
+                        <div class="card-info">
+                            <span class="card-tag">SAMANÁ</span>
+                            <h4><a href="#">Avanza el proyecto de preservación ambiental en las zonas costeras</a></h4>
+                            <p class="post-date"><i class="ri-calendar-line"></i> 7 Oct, 2026</p>
+                        </div>
+                    </article>
+
+                    <article class="strip-card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/400/250?random=13" alt="Regionales 4">
+                        </div>
+                        <div class="card-info">
+                            <span class="card-tag">JARABACOA</span>
+                            <h4><a href="#">Productores locales impulsan la primera feria agroecológica del año</a></h4>
+                            <p class="post-date"><i class="ri-calendar-line"></i> 7 Oct, 2026</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 2. Área Principal: Feed de Noticias + Sidebar Sticky -->
+            <section class="content-with-sidebar">
+
+                <!-- Columna Izquierda: Listado cronológico de noticias -->
+                <div class="main-news-feed">
+                    <h3 class="column-title"><span>Últimas Noticias</span></h3>
+
+                    <!-- Noticia en Lista 1 -->
+                    <article class="feed-card">
+                        <div class="feed-img">
+                            <img src="https://picsum.photos/350/220?random=20" alt="Noticia 1">
+                        </div>
+                        <div class="feed-content">
+                            <span class="card-tag">ACTUALIDAD</span>
+                            <h3><a href="#">Reforma al sistema educativo impulsa la formación tecnológica en
+                                    escuelas</a></h3>
+                            <p class="excerpt">El plan busca capacitar a más de 50.000 estudiantes en herramientas
+                                digitales de
+                                última generación para el mercado laboral moderno...</p>
+                            <span class="post-date"><i class="ri-time-line"></i> Hace 1 hora</span>
+                        </div>
+                    </article>
+
+                    <!-- Noticia en Lista 2 -->
+                    <article class="feed-card">
+                        <div class="feed-img">
+                            <img src="https://picsum.photos/350/220?random=21" alt="Noticia 2">
+                        </div>
+                        <div class="feed-content">
+                            <span class="card-tag">ECONOMÍA</span>
+                            <h3><a href="#">Mercados financieros cierran la semana con un crecimiento estable</a></h3>
+                            <p class="excerpt">Expertos señalan que la inflación se mantiene bajo control, generando
+                                confianza entre
+                                los inversionistas locales e internacionales...</p>
+                            <span class="post-date"><i class="ri-time-line"></i> Hace 3 horas</span>
+                        </div>
+                    </article>
+
+                    <!-- Noticia en Lista 3 -->
+                    <article class="feed-card">
+                        <div class="feed-img">
+                            <img src="https://picsum.photos/350/220?random=22" alt="Noticia 3">
+                        </div>
+                        <div class="feed-content">
+                            <span class="card-tag">SALUD</span>
+                            <h3><a href="#">Nuevos estudios destacan los beneficios de la nutrición en la productividad
+                                    laboral</a>
+                            </h3>
+                            <p class="excerpt">Especialistas recomiendan pausas activas e hidratación adecuada para
+                                mejorar el
+                                rendimiento de los equipos de trabajo...</p>
+                            <span class="post-date"><i class="ri-time-line"></i> Hace 5 horas</span>
+                        </div>
+                    </article>
+
+                    <!-- Paginación Numerada -->
+                    <div class="pagination">
+                        <a href="#" class="page-link prev disabled"><i class="ri-arrow-left-s-line"></i></a>
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <span class="page-dots">...</span>
+                        <a href="#" class="page-link">8</a>
+                        <a href="#" class="page-link next"><i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Sidebar Sticky (Multimedia, Emisoras y Video) -->
+                <aside class="sidebar-sticky">
+
+                    <!-- Widget 1: Emisora Radial En Vivo -->
+                    <div class="widget radio-widget">
+                        <h4 class="widget-title"><i class="ri-radio-2-line"></i> Radio En Vivo</h4>
+                        <div class="radio-player">
+                            <p class="station-name">Radio Katiusca 98.5 FM</p>
+                            <audio controls style="width: 100%; margin-top: 10px;">
+                                <source src="https://stream.zeno.fm/f322438708quv" type="audio/mpeg">
+                                Tu navegador no soporta el reproductor de audio.
+                            </audio>
+                        </div>
+                    </div>
+
+                    <!-- Widget 2: Video Embebido Youtube -->
+                    <div class="widget video-widget">
+                        <h4 class="widget-title"><i class="ri-video-line"></i> Entrevista del Día</h4>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Video destacado"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Widget 3: Publicidad / Banner Sidebar -->
+                    <div class="widget banner-widget">
+                        <div class="sidebar-banner-placeholder">
+                            <span>Publicidad 300x250</span>
+                        </div>
+                    </div>
+
+                </aside>
+
+                <!-- Sección Recomendados para Ti (Idéntica a Regionales) -->
+                <section class="horizontal-strip-section">
+                    <h3 class="column-title"><span>Recomendados para ti</span></h3>
+
+                    <div class="grid-4-columns">
+                        <article class="strip-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/400/250?random=30" alt="Recomendado 1">
+                            </div>
+                            <div class="card-info">
+                                <span class="card-tag">CIENCIA</span>
+                                <h4><a href="#">Misión espacial enviará nuevos sensores para analizar el clima
+                                        global</a></h4>
+                                <p class="post-date"><i class="ri-calendar-line"></i> 9 Oct, 2026</p>
+                            </div>
+                        </article>
+
+                        <article class="strip-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/400/250?random=31" alt="Recomendado 2">
+                            </div>
+                            <div class="card-info">
+                                <span class="card-tag">FINANZAS</span>
+                                <h4><a href="#">Estrategias clave para emprendedores en economías emergentes</a></h4>
+                                <p class="post-date"><i class="ri-calendar-line"></i> 9 Oct, 2026</p>
+                            </div>
+                        </article>
+
+                        <article class="strip-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/400/250?random=32" alt="Recomendado 3">
+                            </div>
+                            <div class="card-info">
+                                <span class="card-tag">AMBIENTE</span>
+                                <h4><a href="#">Proyectos de reforestación urbana reducen la temperatura en
+                                        metrópolis</a></h4>
+                                <p class="post-date"><i class="ri-calendar-line"></i> 8 Oct, 2026</p>
+                            </div>
+                        </article>
+
+                        <article class="strip-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/400/250?random=33" alt="Recomendado 4">
+                            </div>
+                            <div class="card-info">
+                                <span class="card-tag">INNOVACIÓN</span>
+                                <h4><a href="#">Nuevas herramientas de software optimizan la gestión de datos
+                                        masivos</a></h4>
+                                <p class="post-date"><i class="ri-calendar-line"></i> 8 Oct, 2026</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+        </div> <!-- Cierre de container -->
+    </main> <!-- Cierre de main -->
+
+    <!-- FOOTER SOLO CON 2 NIVELES (Oscuro) -->
+    <footer class="site-footer">
+
+        <!-- Nivel 1: Las 4 Categorías en fondo negro -->
+        <div class="footer-categories">
+            <div class="container">
+                <div class="grid-4-columns">
+
+                    <div class="footer-col">
+                        <h4 class="widget-title light-widget-title">Internacionales</h4>
+                        <article class="footer-mini-post">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=40" alt="Internacionales">
+                            </div>
+                            <h5><a href="#">Cumbres internacionales logran acuerdos multilaterales sobre comercio</a>
+                            </h5>
+                        </article>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="widget-title light-widget-title">Salud</h4>
+                        <article class="footer-mini-post">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=41" alt="Salud">
+                            </div>
+                            <h5><a href="#">Avances en investigación médica prometen tratamientos más eficientes</a>
+                            </h5>
+                        </article>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="widget-title light-widget-title">Deportes</h4>
+                        <article class="footer-mini-post">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=42" alt="Deportes">
+                            </div>
+                            <h5><a href="#">Atletas locales destacan en competencias internacionales de alto
+                                    rendimiento</a>
+                            </h5>
+                        </article>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="widget-title light-widget-title">Cultura</h4>
+                        <article class="footer-mini-post">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/300/200?random=43" alt="Cultura">
+                            </div>
+                            <h5><a href="#">Festival de arte contemporáneo reúne a expositores de todo el mundo</a></h5>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Nivel 2: Créditos y Copyright -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Katiusca Studio. Todos los derechos reservados.</p>
+                <p class="credits">Desarrollado por <strong>Katiusca Studio</strong></p>
+            </div>
+        </div>
+
+    </footer>
+    </main>
+
+    <!-- Swiper.js JS al final del body (antes de main.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper.js CSS para el carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
