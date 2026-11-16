@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurelia | Wedding Planner & Event Designer</title>
+    <!-- Fuentes de Google Fonts (Cormorant Garamond + Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Vinculamos nuestro archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navegación Principal -->
+    <header class="header">
+        <div class="container header__flex">
+
+            <!-- Logo -->
+            <a href="#" class="logo">AURELIA</a>
+
+            <!-- Menú de enlaces -->
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li><a href="#experiencia" class="nav__link">La Experiencia</a></li>
+                    <li><a href="#servicios" class="nav__link">Servicios</a></li>
+                    <li><a href="#testimonios" class="nav__link">Testimonios</a></li>
+                    <li><a href="#contacto" class="nav__link nav__link--btn">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón de menú hamburguesa (para pantallas móviles) -->
+            <button class="burger-btn" aria-label="Abrir menú" id="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+    <main>
+        <!-- Sección Hero / Banner Principal -->
+        <section class="hero" id="inicio">
+            <div class="hero__overlay"></div>
+
+            <div class="container hero__content">
+                <span class="hero__subtitle">Pasión por la Perfección</span>
+                <h1 class="hero__title">Convertimos tu visión en una experiencia inolvidable</h1>
+                <p class="hero__description">
+                    Diseño, coordinación y planificación integral de bodas de lujo y eventos exclusivos en República
+                    Dominicana.
+                </p>
+
+                <div class="hero__buttons">
+                    <a href="#contacto" class="btn btn--primary">Planifica tu Evento</a>
+                    <a href="#experiencia" class="btn btn--outline-light">Conoce la Experiencia</a>
+                </div>
+            </div>
+        </section>
+        <!-- Sección La Experiencia -->
+        <section class="experience section-padding" id="experiencia">
+            <div class="container grid grid--2-cols align-center">
+
+                <!-- Columna 1: Texto e Historia -->
+                <div class="experience__text fade-in">
+                    <span class="section__subtitle">Conoce Novella</span>
+                    <h2 class="section__title">Nuestra pasión por la perfección en cada detalle</h2>
+
+                    <p class="experience__paragraph">
+                        En <strong>Novella Wedding-Event Planner & Designer</strong> nos dedicamos a convertir la visión
+                        de
+                        nuestros clientes en experiencias únicas e inolvidables con un evento <em>“a la carte”</em>,
+                        donde prima
+                        la elegancia y la atención personalizada.
+                    </p>
+
+                    <p class="experience__paragraph">
+                        Con más de dos décadas de trayectoria en la industria de lujo, nuestro equipo altamente
+                        capacitado se
+                        encarga de anticipar cada situación para que disfrutes de tu gran día con absoluta tranquilidad
+                        y
+                        relajación.
+                    </p>
+
+                    <div class="experience__stats">
+                        <div class="stat-item">
+                            <span class="stat-item__number">20+</span>
+                            <span class="stat-item__label">Años de Experiencia</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-item__number">100%</span>
+                            <span class="stat-item__label">Atención A La Carte</span>
+                        </div>
+                    </div>
+
+                    <a href="#contacto" class="btn btn--outline-dark">Conoce Al Equipo</a>
+                </div>
+
+                <!-- Columna 2: Fotografía Destacada -->
+                <div class="experience__image-wrapper fade-in">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop"
+                        alt="Decoración floral y montaje elegante para boda diseñado por Novella"
+                        class="experience__img" loading="lazy">
+                    <div class="experience__badge">
+                        <span>20+ Años</span>
+                        <small>Creando Momentos</small>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Sección Servicios -->
+        <section class="services section-padding bg-light" id="servicios">
+            <div class="container">
+
+                <!-- Encabezado de la Sección -->
+                <div class="section-title text-center">
+                    <span class="section__subtitle">Lo Que Hacemos</span>
+                    <h2 class="section__title">Nuestros Servicios Exclusivos</h2>
+                    <p class="section__description">
+                        Diseñamos, coordinamos y ejecutamos de principio a fin cada detalle de tu evento con los
+                        estándares de
+                        calidad más exigentes.
+                    </p>
+                </div>
+
+                <!-- Grid de 3 Tarjetas de Servicios -->
+                <div class="grid grid--3-cols mt-4">
+
+                    <!-- Card 1: Bodas Destino -->
+                    <article class="card fade-in">
+                        <div class="card__media">
+                            <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?q=80&w=800&auto=format&fit=crop"
+                                alt="Boda destino de lujo en la playa organizada por Novella" loading="lazy">
+                            <span class="card__tag">Punta Cana & Samaná</span>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Bodas Destino de Lujo</h3>
+                            <p class="card__text">
+                                Nos destacamos por coordinar bodas de ensueño en los destinos más paradisíacos: Punta
+                                Cana, Cap
+                                Cana, La Romana, Casa de Campo, Samaná, Las Terrenas o Santo Domingo.
+                            </p>
+                            <a href="#contacto" class="card__link">Consultar Disponibilidad &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Eventos Corporativos -->
+                    <article class="card fade-in">
+                        <div class="card__media">
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop"
+                                alt="Montaje de evento corporativo de alto nivel" loading="lazy">
+                            <span class="card__tag">Corporativo</span>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Eventos Corporativos</h3>
+                            <p class="card__text">
+                                Orquestamos lanzamientos de marcas, galas institucionales e inauguraciones cuidando la
+                                imagen de
+                                tu empresa con logística impecable y precisión milimétrica.
+                            </p>
+                            <a href="#contacto" class="card__link">Consultar Disponibilidad &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Coordinación & Logística -->
+                    <article class="card fade-in">
+                        <div class="card__media">
+                            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800&auto=format&fit=crop"
+                                alt="Coordinación y logística de eventos sociales" loading="lazy">
+                            <span class="card__tag">Eventos Sociales</span>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Coordinación & Logística</h3>
+                            <p class="card__text">
+                                Nos apasiona prever situaciones, controlar tiempos y dirigir al equipo de suplidores
+                                para que
+                                cada momento ocurra con fluidez y sin ningún estrés.
+                            </p>
+                            <a href="#contacto" class="card__link">Consultar Disponibilidad &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- Sección Testimonios Con Imágenes -->
+        <section class="testimonials section-padding" id="testimonios">
+            <div class="container">
+
+                <!-- Puntuación General / Social Proof -->
+                <div class="rating-badge fade-in">
+                    <div class="rating-badge__stars">★★★★★</div>
+                    <div class="rating-badge__score">5.0 / 5.0</div>
+                    <p class="rating-badge__text">Basado en más de <strong>78 reseñas de novias y clientes
+                            satisfechos</strong>
+                    </p>
+                </div>
+
+                <div class="section-title text-center mt-4">
+                    <span class="section__subtitle">Lo Que Dicen De Nosotras</span>
+                    <h2 class="section__title">Historias de Amor & Celebración</h2>
+                </div>
+
+                <!-- Grid de Testimonios con Fotos -->
+                <div class="grid grid--2-cols mt-4">
+
+                    <!-- Testimonio 1 con Foto -->
+                    <blockquote class="testimonial-card fade-in">
+                        <div class="testimonial-card__quote">“</div>
+                        <p class="testimonial-card__text">
+                            Amé cada detalle, desde el servicio de wedding planner hasta el de decoración. Liza,
+                            Carlota,
+                            Daniela, Laura y todas las chicas son la mejor definición de que un buen trabajo en equipo
+                            da
+                            resultados sorprendentes. Nuestra boda fue justo como la quería, superando mis sueños.
+                        </p>
+                        <footer class="testimonial-card__author-box">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+                                alt="Foto de la novia Indira Marielis" class="testimonial-card__avatar" loading="lazy">
+                            <div class="testimonial-card__info">
+                                <strong class="testimonial-card__author">Indira Marielis</strong>
+                                <span class="testimonial-card__event">Boda Novella — 10/10</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <!-- Testimonio 2 con Foto -->
+                    <blockquote class="testimonial-card fade-in">
+                        <div class="testimonial-card__quote">“</div>
+                        <p class="testimonial-card__text">
+                            Mi experiencia fue excepcional y puedo decir que a nivel de profesionalismo, decoración,
+                            logística y
+                            cariño superó todas mis expectativas. Fue un cuento de hadas, todos mis invitados quedaron
+                            alucinados con lo mágico que fue todo. ¡Con los ojos cerrados, las mejores planners del
+                            mundo!
+                        </p>
+                        <footer class="testimonial-card__author-box">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop"
+                                alt="Foto de la novia Romina" class="testimonial-card__avatar" loading="lazy">
+                            <div class="testimonial-card__info">
+                                <strong class="testimonial-card__author">Romina</strong>
+                                <span class="testimonial-card__event">Boda Destino en R.D.</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- Sección Portafolio de Eventos -->
+        <section class="portfolio section-padding bg-light" id="portafolio">
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <span class="section__subtitle">Galardón & Inspiración</span>
+                    <h2 class="section__title">Nuestros Eventos Destacados</h2>
+                    <p class="section__description">
+                        Una pincelada de las historias inolvidables que hemos diseñado en Punta Cana, Casa de Campo y
+                        Santo
+                        Domingo.
+                    </p>
+                </div>
+
+                <!-- Grid de Galería Editorial -->
+                <div class="portfolio__grid mt-4">
+
+                    <!-- Proyecto 1: Boda Orgánica -->
+                    <article class="portfolio__item portfolio__item--large fade-in">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000&auto=format&fit=crop"
+                            alt="Pampagrass & Macramé Wedding en Punta Cana" loading="lazy">
+                        <div class="portfolio__overlay">
+                            <span class="portfolio__category">Boda Destino</span>
+                            <h3 class="portfolio__title">Organic Macramé Wedding</h3>
+                            <p class="portfolio__location">📍 Punta Cana, R.D.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2: Boda Clásica -->
+                    <article class="portfolio__item fade-in">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop"
+                            alt="Enchanted Forest Wedding" loading="lazy">
+                        <div class="portfolio__overlay">
+                            <span class="portfolio__category">Boda de Lujo</span>
+                            <h3 class="portfolio__title">Enchanted Forest Gala</h3>
+                            <p class="portfolio__location">📍 Casa de Campo, La Romana</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3: Evento Corporativo / Gala -->
+                    <article class="portfolio__item fade-in">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop"
+                            alt="Gala Corporativa Nickelodeon Resorts" loading="lazy">
+                        <div class="portfolio__overlay">
+                            <span class="portfolio__category">Corporativo</span>
+                            <h3 class="portfolio__title">Inauguración Nickelodeon Resort</h3>
+                            <p class="portfolio__location">📍 Uvero Alto, Punta Cana</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4: Boda Tropical Chic -->
+                    <article class="portfolio__item portfolio__item--wide fade-in">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1000&auto=format&fit=crop"
+                            alt="Tropical Simplicity Wedding en Samaná" loading="lazy">
+                        <div class="portfolio__overlay">
+                            <span class="portfolio__category">Boda Playa</span>
+                            <h3 class="portfolio__title">Tropical Simplicity</h3>
+                            <p class="portfolio__location">📍 Las Terrenas, Samaná</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección El Proceso de Trabajo & FAQ -->
+        <section class="faq section-padding" id="faq">
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <span class="section__subtitle">Paso a Paso</span>
+                    <h2 class="section__title">Cómo Trabajamos & Preguntas Frecuentes</h2>
+                </div>
+
+                <div class="grid grid--2-cols mt-4">
+
+                    <!-- Columna 1: El Proceso en 3 Pasos -->
+                    <div class="process-box fade-in">
+                        <h3 class="process-box__title">Tu Experiencia de Planificación</h3>
+
+                        <div class="step">
+                            <div class="step__number">01</div>
+                            <div class="step__content">
+                                <h4>Consulta Inicial & Concepto</h4>
+                                <p>Escuchamos tu visión, presupuesto y requerimientos para diseñar una propuesta 100% "a
+                                    la
+                                    carte".</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step__number">02</div>
+                            <div class="step__content">
+                                <h4>Selección de Suplidores & Diseño</h4>
+                                <p>Coordinamos la logística, la paleta cromática, la mantelería, flores y la selección
+                                    de
+                                    proveedores de alto nivel.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step__number">03</div>
+                            <div class="step__content">
+                                <h4>Ejecución & Control del Día D</h4>
+                                <p>Nuestro equipo dirige el evento con precisión suiza para que tú solo te dediques a
+                                    disfrutar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Preguntas Frecuentes (Acordeón Simple) -->
+                    <div class="faq-list fade-in">
+
+                        <details class="faq-item" open>
+                            <summary class="faq-item__question">¿Con cuánta anticipación debo reservar mi fecha?
+                            </summary>
+                            <div class="faq-item__answer">
+                                <p>Para bodas destino y grandes eventos, recomendamos iniciar el proceso con 8 a 12
+                                    meses de
+                                    anticipación. Sin embargo, nuestro equipo cuenta con la capacidad de coordinar bodas
+                                    en
+                                    tiempos más reducidos gracias a nuestra amplia red de suplidores.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-item__question">¿Trabajan en todo el país y fuera de República
+                                Dominicana?
+                            </summary>
+                            <div class="faq-item__answer">
+                                <p>¡Sí! Somos especialistas en bodas destino en Punta Cana, Cap Cana, Casa de Campo,
+                                    Samaná, Las
+                                    Terrenas, Jarabacoa, Santo Domingo y Santiago.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary class="faq-item__question">¿Qué diferencia a Aurelia de otros Planners?</summary>
+                            <div class="faq-item__answer">
+                                <p>Nuestra experiencia de más de dos décadas, la atención personalizada "a la carte" y
+                                    un
+                                    sistema organizativo integral que elimina el estrés del proceso desde el día uno.
+                                </p>
+                            </div>
+                        </details>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- Sección Contacto & Cotización -->
+        <section class="contact section-padding bg-light" id="contacto">
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <span class="section__subtitle">Hablemos de tu Gran Día</span>
+                    <h2 class="section__title">Inicia la Planificación de tu Evento</h2>
+                    <p class="section__description">
+                        Completa el formulario a continuación y una de nuestras Wedding & Event Planners se pondrá en
+                        contacto
+                        contigo en menos de 24 horas.
+                    </p>
+                </div>
+
+                <div class="grid grid--2-cols mt-4 align-start">
+
+                    <!-- Columna 1: Formulario Elegante -->
+                    <form class="contact__form fade-in" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo *</label>
+                            <input type="text" id="name" name="name" placeholder="Ej. Sofia Rodríguez" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono / WhatsApp *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (809) 000-0000" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="event-type">Tipo de Evento *</label>
+                                <select id="event-type" name="event-type" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="boda">Boda Destino</option>
+                                    <option value="corporativo">Evento Corporativo</option>
+                                    <option value="social">Evento Social / Gala</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Destino Preferido</label>
+                                <select id="location" name="location">
+                                    <option value="punta-cana">Punta Cana / Cap Cana</option>
+                                    <option value="casa-de-campo">Casa de Campo / La Romana</option>
+                                    <option value="samana">Samaná / Las Terrenas</option>
+                                    <option value="santo-domingo">Santo Domingo</option>
+                                    <option value="otro">Otro Destino</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Cuéntanos sobre tu visión y fecha estimada</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Detalles de tu evento, número estimado de invitados..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full">Enviar Solicitud de Cotización</button>
+                    </form>
+
+                    <!-- Columna 2: Sedes e Información de Contacto -->
+                    <div class="contact__info fade-in">
+                        <div class="info-card">
+                            <h3>Oficina Santo Domingo</h3>
+                            <p>📍 José A. Aybar Castellanos #148, La Esperilla, Santo Domingo, D.N. República
+                                Dominicana.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Oficina Punta Cana</h3>
+                            <p>📍 Boulevard Punta Cana, La Altagracia, República Dominicana.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Atención Directa</h3>
+                            <p>📱 <strong>WhatsApp / Teléfono:</strong> +1 (829) 8765432</p>
+                            <p>⏰ <strong>Horario:</strong> Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página (Footer de Lujo) -->
+    <footer class="footer">
+        <div class="container grid grid--footer">
+
+            <!-- Columna 1: Brand -->
+            <div class="footer__col">
+                <h3 class="footer__logo">AURELIA</h3>
+                <p class="footer__tagline">Wedding Planner & Event Designer</p>
+                <p class="footer__desc">
+                    Convertimos visiones en momentos inolvidables con elegancia, precisión y pasión por la perfección en
+                    cada detalle.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div class="footer__col">
+                <h4 class="footer__title">Navegación</h4>
+                <ul class="footer__links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#experiencia">La Experiencia</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Cobertura -->
+            <div class="footer__col">
+                <h4 class="footer__title">Destinos R.D.</h4>
+                <ul class="footer__links">
+                    <li>Punta Cana & Cap Cana</li>
+                    <li>Casa de Campo, La Romana</li>
+                    <li>Samaná & Las Terrenas</li>
+                    <li>Santo Domingo & Santiago</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Firma de Créditos KatiuscaStudio -->
+        <div class="footer__bottom">
+            <div class="container footer__bottom-flex">
+                <p>&copy; 2026 Aurelia Wedding Planner & Designer. Todos los derechos reservados.</p>
+
+                <div class="katiusca-signature">
+                    <span>Diseño & Desarrollo por</span>
+                    <a href="#" target="_blank" class="katiusca-badge">
+                        <strong class="katiusca-brand">Katiusca<span>Studio</span></strong>
+                        <small class="katiusca-tag">UX / FRONT-END</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================================================================= -->
+    <!-- PEGAR AQUÍ EL BOTÓN FLOTANTE DE WHATSAPP -->
+    <!-- ================================================================= -->
+    <a href="https://wa.me/18293834121?text=Hola%20Novella,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20para%20un%20evento."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="currentColor"
+                d="M16 2a13 13 0 0 0-11.3 19.4L3 29l7.8-1.6A13 13 0 1 0 16 2zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-4.3.9.9-4.2-.3-.5A10.6 10.6 0 1 1 26.6 16 10.6 10.6 0 0 1 16 25.6zm5.8-8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5a.4.4 0 0 0 0-.4c0-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4a3.8 3.8 0 0 0-1.2 2.8 6.6 6.6 0 0 0 1.4 3.5 15.2 15.2 0 0 0 5.8 5.1c2.2.9 3.1 1 4.2.8a3.6 3.6 0 0 0 2.4-1.7 2.9 2.9 2.9 0 0 0 .2-1.7c-.1-.1-.4-.2-.7-.4z" />
+        </svg>
+    </a>
+    </main>
+
+    <!-- Script de JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
